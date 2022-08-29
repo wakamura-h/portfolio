@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+/* リセット */
+html,
+body,
+header,
+footer,
+main,
+section,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+p,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: black;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す アクションんは0.3秒で動く*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+/*ボタンにマウスを置くとちょっと変化する 今回は半透明になる変化*/
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/*/////サイト全体/////*/
+body{
+    background-color: #ffffff;
+}
+
+
+/*/////トップページ/////*/
+/*///PC版///*/
+/*ナビの追順*/
+.global-navigation{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -100px;
+    position: sticky;
+    top:20px
+}
+
+/*web design / cording*/
+.global-navigation h2{
+    font-family: m-plus-2p,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px;
+    margin-left: 18px;
+}
+/*Hikari Wakamura Portforio*/
+.global-navigation h3{
+    font-family: m-plus-2p,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    margin-left: 65px;
+}
+/*左側縦書き*/
+.side_box{
+    writing-mode:vertical-rl;
+}
+/*グローバルナビ*/
+.pc_nav{
+    margin-right: 65px;
+}
+.pc_nav li{
+    font-family: m-plus-2p,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 2.08;
+}
+
+/*/////header/////*/
+.header_wrap{
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.header_title{
+    position: relative;
+}
+.title{
+    font-family: m-plus-2p,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 90px;
+    margin-top: -100px;
+    text-align: start;
+}
+.header_dottop{
+    width: 170px;
+    position: absolute;
+    top: -20%;
+    right: 70%;
+    z-index: -10;
+
+}
+.header_dotbottom{
+    width: 137px;
+    position: absolute;
+    top: 300%;
+    left: 85%;
+    z-index: -10;
+}
+.header_bg{
+    width: 760px;
+    margin-top: 50px;
+}
+.hader_text{
+    text-align: center;
+}
+.heading{
+    font-size: 40px;
+    font-family: zen-kurenaido, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 90px;
+}
+.text{
+    font-size: 25px;
+    line-height: 2;
+    margin-top: 90px;
+}
+
+
+/*/////contact form/////*/
+.form {
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+    padding: 100px 200px 0 200px;
+}
+.form_item{
+    border-top: 1px solid transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.formitem_label,.form_item_msg {
+    width: 100%;
+    max-width: 1000px;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.formitem_label {
+    margin-top: 8px;
+    margin-bottom: auto;
+}
+
+.required{
+    border-radius: 6px;
+    margin-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 48px;
+    display: inline-block;
+    text-align: center;
+    background: black;
+    color: #fff;
+    font-size: 14px;
+}
+    /* 名前・フリガナ・メールアドレスボックス*/
+input[type="text"]{
+    width: 100%; 
+    font-size: 18px; 
+    padding: 10px;
+    border: solid 2px #e3e6ea; /* 線の色 */
+    border-radius: 4px; /* 角丸 */
+}
+input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px; /* フォントサイズ */
+    border: solid 2px #e3e6ea; /* 線の色 */
+    border-radius: 4px; /* 角丸 */
+}
+
+    /* お問合せボックス */
+textarea {
+    resize: none;
+}
+.form_txtarea{
+    width: 100%; /* 幅：横いっぱいに */
+    height: 150px; /* 高さ */
+    font-size: 18px; /* フォントサイズ */
+    border: solid 2px #e3e6ea; /* 線の色 */
+    border-radius: 4px;/* 角丸 */
+}
+
+
+
+  /* フォーカス時のスタイル */
+input[type="text"]:focus {
+    border-color: #ff9252; /* 線の色 */
+    outline: 0;
+}
+input[type="email"]:focus {
+    border-color: #ff9252; /* 線の色 */
+    outline: 0;
+}
+textarea:focus {
+    border: solid 2px #ff9252;
+    outline: 0;
+}
+
+.form_btn{
+    margin: 0 auto;
+    display: block;
+    width: 300px;
+    padding-top: 60px;
+}
+
+.footer_text{
+    font-size: 10px;
+    text-align: center;
+    margin: 100px 0 100px 0;
+}
+
+
+@media screen and (max-width: 480px) {
+.form {
+    margin-top: 40px;
+}
+
+.form-item {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+}
+.formitem_label {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.formitem_label,.form_item_msg {
+    margin-top: 0;
+}
+
+.required {
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 32px;
+    font-size: 10px;
+}
+
+.form_input {
+    margin-left: 0;
+    margin-top: 18px;
+    height: 40px;
+    flex: inherit;
+    font-size: 15px;
+    }
+
+.form_iteme_txtarea {
+    margin-top: 18px;
+    margin-left: 0;
+    height: 200px;
+    flex: inherit;
+    font-size: 15px;
+}
+
+.form_btn {
+    margin-top: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 160px;
+    font-size: 16px;
+}}

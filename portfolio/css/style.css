@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+/* リセット */
+html,
+body,
+header,
+footer,
+main,
+section,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+p,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: black;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す アクションんは0.3秒で動く*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+/*ボタンにマウスを置くとちょっと変化する 今回は半透明になる変化*/
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/*/////サイト全体/////*/
+body{
+    background-color: #ffffff;
+}
+
+
+/*/////トップページ/////*/
+/*///PC版///*/
+
+/*ナビの追順*/
+.global-navigation{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -100px;
+    position: sticky;
+    top:20px
+}
+
+/*web design / cording*/
+.global-navigation h2{
+    font-family: m-plus-2p,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px;
+    margin-left: 18px;
+}
+/*Hikari Wakamura Portforio*/
+.global-navigation h3{
+    font-family: m-plus-2p,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    margin-left: 65px;
+}
+/*左側縦書き*/
+.side_box{
+    writing-mode:vertical-rl;
+}
+/*グローバルナビ*/
+.pc_nav{
+    margin-right: 65px;
+}
+.pc_nav li{
+    font-family: m-plus-2p,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 2.08;
+}
+
+/*/////header/////*/
+
+/*title文字アニメーション*/
+.title {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    font-size: 40px;
+    font-family: zen-kurenaido, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.title {
+    display: block;
+    opacity:0;
+    text-align: center;
+}
+
+.header_animation{
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 300px;
+}
+
+/*背景イラスト*/
+.animation2{
+    max-width: 1000px;
+    position: relative;
+}
+
+/*ドットイラスト フェードイン・フェードアウト繰り返し*/
+.animation1{
+    max-width: 1000px;
+    position: absolute;
+    top: 400px;
+    animation-name: smooth-fadein-out;  /*フェードイン・アウト*/
+    animation-duration: 1.5s; /*アニメーションの所要時間*/
+    animation-timing-function: linear;/*始まりから終わりまでの進行速度設定*//*等しい速度*/
+    animation-delay: 0s; /*アニメーションをいつ開始するか*/
+    animation-iteration-count: infinite;/*繰り返し設定*//*無制限*/
+    animation-direction: alternate;/*アニメーション再生の向き*//*毎回反転させ初回は順方向*/
+}
+@keyframes smooth-fadein-out {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/*/////work/////*/
+#work{
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+/*work見出し*/
+.work_top{
+    position: relative;
+}
+.work_title{
+    position: absolute;
+    font-family: m-plus-2p,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 90px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+/*work作品一覧*/
+.work_wrap{
+    position: relative;
+}
+
+.work_list{
+    display: flex;
+    justify-content: space-between;
+}
+/*作品一覧の基本設定*/
+.unit1,.unit2_left,.unit2_right,.unit3{
+    width: 257px;
+    margin-top: 60px;
+}
+/*作品一覧一列目*/
+.unit1_center{
+    width: 257px;
+    margin-top: 160px;
+}
+/*作品一覧二列目*/
+.unit2_left{
+    margin-left: 150px;
+}
+.unit2_right{
+    margin-right: 150px;
+}
+/*作品一覧三列目*/
+.unit3_center{
+    width: 257px;
+    margin-top: 140px;
+}
+.unit3_right{
+    width: 257px;
+    margin-top: 240px;
+}
+/*dot*/
+.dot_green{
+    width: 190px;
+    margin-left: 180px;
+}
+.dot_blue{
+    width: 165px;
+    position: absolute;
+    top:950px;
+    right: 100px;
+    z-index: -10;
+}
+.dot_yellow{
+    width: 345px;
+    position: absolute;
+    top:1400px;
+    left: 80px;
+    z-index: -10;
+}
+/*制作実績　グレースケールからカラーへ*/
+.work_list img{
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in;
+}
+.work_list img:hover{
+    filter: grayscale(0%);
+}
+
+
+/*/////contact/////*/
+.contact{
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.contact_title{
+    font-family: m-plus-2p,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 90px;
+    margin-top: 113px;
+}
+.text1{
+    font-size: 20px;
+    line-height: 3;
+    margin-top: 105px;
+}
+.contact img{
+    width: 350px;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in;
+    padding-top: 30px;
+}
+.contact img:hover{
+    filter: grayscale(0%);
+}
+.text2{
+    font-size: 15px;
+    margin-top: 65px;
+}
+
+/*/////footer/////*/
+.footer_text{
+    font-size: 10px;
+    text-align: center;
+    margin-top: 100px;
+}
+.footer_img{
+    width: 333px;
+    margin-right: 0;
+    margin-left: auto;
+    display: block;
+    margin-top: -300px;
+}
+
