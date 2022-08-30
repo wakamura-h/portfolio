@@ -55,7 +55,7 @@ body{
 }
 .bg{
     background-image: url(../img/72@2x.png),url(../img/73@2x.png),url(../img/71@2x.png),url(../img/74@2x.png);
-    background-position:left top 400px,center top 300px,right bottom 800px,left bottom 80px;
+    background-position:left top,center top 300px,right bottom 800px,left bottom 80px;
     background-repeat:no-repeat,no-repeat,no-repeat,no-repeat;
     background-size: 43%,10%,35%,28%;
 
@@ -121,7 +121,6 @@ html.loading-delay {
     font-style: normal;
     font-size: 90px;
     padding-left:  740px;
-    margin-bottom: 500px;
 
 }
 
@@ -132,111 +131,18 @@ html.loading-delay {
     margin: 0 auto;
     padding: 0 180px;
 }
-.thumbnail{
-    display: block;  /*block flex*/
-    padding: 50px 0 50px 0;
+.work_maimimg{
+    display: flex;  /*block flex*/
+    padding-top: 260px;
     text-align: center;
-    margin: 200px 170px 0 170px;
 }
-.thumbnail_img{
-    width: 65%;
-    display: inline-block;
+.main_img{
+    width: 50%;
 }
-
-
-/*-----作品アニメーション-----*/
-/*ふわっと出る*/
-/* fadeUp */
-.fadeUp{
-    animation-name:fadepAnime;;
-    animation-duration:0.5s;
-    animation-fill-mode:forwards;
-    opacity:0;
+.work_maim p{
+    font-size: 13px;
+    padding-top: 15px;
 }
-
-@keyframes fadeUpAnime{
-from {
-    opacity: 0;
-    transform: translateY(100px);
-}
-
-to {
-    opacity: 1;
-    transform: translateY(0);
-}
-}
-/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
-.fadeUpTrigger{
-    opacity: 0;
-}
-
-
-/*枠線が伸びて出現*/
-.thumbnail{
-    position: relative; /* 枠線が書かれる基点*/
-}
-/*上下線*/
-.thumbnail::before,
-.thumbnail::after{
-    position: absolute;
-    content:"";
-    width:0;
-    height:1px;
-    background:#333;/* 枠線の色*/
-}
-/*左右線*/
-.thumbnail2::before,
-.thumbnail2::after{
-    position: absolute;
-    content:"";
-    width: 1px;
-    height:0;
-    background:#333;/* 枠線の色*/
-}
-/*上線*/
-.thumbnail::before {
-    top:0;
-    left:0;
-    animation: lineAnime .5s linear 0s forwards;/*表示されて0秒後に上線が0.5秒かけて表示*/
-}
-/*右線*/
-.thumbnail2::before{ 
-    top:0;
-    right:0;
-    animation: lineAnime2 .5s linear .5s forwards;/*表示されて0.5秒後に右線が0.5秒かけて表示*/
-}
-/*下線*/
-.thumbnail::after { 
-    bottom:0;
-    right:0;
-    animation: lineAnime .5s linear 1s forwards;/*表示されて1秒後に下線が0.5秒かけて表示*/
-}
-/*左線*/
-.thumbnail2::after{ 
-    bottom:0;
-    left:0;
-    animation: lineAnime2 .5s linear 1.5s forwards;/*表示されて1.5秒後に左線が0.5秒かけて表示*/
-}
-@keyframes lineAnime {
-    0% {width:0%;}
-    100%{width:100%;}
-}
-@keyframes lineAnime2 {
-    0% {height:0%;}
-    100%{height:100%;}
-}
-
-
-/*枠線内側の要素*/
-.thumbnail .thumbnail_img{
-    animation: lineInnerAnime .5s linear 1.5s forwards;/*1.5秒後に中央のエリアが0.5秒かけて表示*/
-    opacity: 0;/*初期値を透過0にする*/ 
-}
-@keyframes lineInnerAnime{
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-
 
 .desc{
     display: block;

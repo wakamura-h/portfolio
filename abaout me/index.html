@@ -52,85 +52,94 @@
 
 
 <body>
-    <div class="bg"></div>
-    <div class="global-navigation">
-        <div class="side_box">
-            <h2>web design / cording</h2>
-            <h3>Hikari Wakamura Portforio</h3>
+    <div class="bg">
+        <div class="global-navigation">
+            <div class="side_box">
+                <h2>web design / cording</h2>
+                <h3>Hikari Wakamura Portforio</h3>
+            </div>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="../index.html">to TOP</a></li>
+                    <li><a href="../index.html#work">Work</a></li>
+                    <li><a href="#aboutme">About me</a></li>
+                    <li><a href="#sarvice">Service</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="pc_nav">
-            <ul>
-                <li><a href="../index.html">TOP</a></li>
-                <li><a href="../index.html#work">Work</a></li>
-                <li><a href="#aboutme">About me</a></li>
-                <li><a href="#sarvice">Service</a></li>
-                <li><a href="../contact/index.html">Contact</a></li>
-            </ul>
-        </nav>
+
+        <!--ヘッダー-->
+        <header>
+            <div class="header_wrap">
+                <div class="header_title">
+                    <h2 class="title">About me</h2>
+                    <h3 class="heading">「大切な想いを沢山の人に知ってもらいたい」<br>
+                        伝える人と見る人が繋がる架け橋のようなwebデザイナーをめざしてます。
+                    </h3>
+                </div>
+            </div>
+        </header>
+
+        <section id="aboutme">
+            <div class="aboutme_top">
+                <img src="img/アセット 65@2x.png" alt="about_me">
+            </div>
+            <div class="name">
+                <img src="img/アセット 62@2x.png" alt="name">
+                <p class="name_text">hikari wakamura</p>
+            </div>
+            <div class="profile">
+                <p class="profile_text">東京で生まれ育ちこのまま東京を出ることはないだろうと思っていたら結婚後まさかの大阪へ引越し。<br>
+                    現在は長男（サッカー、Switch、ポケモンをこよなく愛するバトル好き男子）、次男（最近一人将棋にハマり中）
+                    、末娘（マリーアントワネットも驚くワガママ女王様）の育児と子供服のハンドメイド販売をしながらwebデザインの勉強をしています。</p>
+                <img class="profile_img" src="img/アセット 60@2x.png" alt="profile_img">
+            </div>
+            <div class="skill">
+                <img class="skill_img" src="img/アセット 61@2x.png" alt="skill">
+                <p class="skill_text">Illustrator/Photoshop/HTML/css</p>
+            </div>
+        </section>
+
+        <section id="sarvice">
+            <h2 class="service_title">Service</h2>
+            <div class="web">
+                <div class="webitem">
+                    <span class="item_title">WEBデザイン</span>
+                    <span class="item_lead">[illustrator・Photoshop]</span>
+                </div>
+                <P class="item_text">目的達成・問題解決はもちろん、
+                    お客様の想いやユーザー目線を忘れず使いやすいWebデザインをご提案します。バナー制作もお気軽にお問合せください。</P>
+            </div>
+            <div class="coding">
+                <div class="codingitem">
+                    <span class="item_title">コーディング</span>
+                    <span class="item_lead">[HTML・CSS・Jquery・WordPress]</span>
+                </div>
+                <P class="item_text">HTML&CSSを用いてデザインカンプから再現性の高いコーディングができます。
+                    また、スマートフォンに対応したサイトやJavascriptを使用した動きのあるサイト作成も可能。デザインに込められた思いをサイト上に表現したします。</P>
+            </div>
+        </section>
+
+        <footer>
+            <div class="contact">
+                <h2 class="contact_title">contact</h2>
+                <p class="text1">あなたの大切な想いをカタチにするお手伝いいたします。<br>
+                    まずはお気軽にご相談ください。無料相談・お見積りいたします。</p>
+                <a href="../contact/index.html"><img class="contact_img" src="img/アセット 31@2x.png" alt="contact"></a>
+                <p class="text2">※セールスなどのお問合せ・ご相談は返信できかねますのでご遠慮ください</p>
+            </div>
+            <p class="footer_text">© wakamura hikari,DESIGN.</p>
+        </footer>
+
+        <script>
+            // フォント読み込みエラー対策
+            setTimeout(function () {
+                if (document.getElementsByTagName("html")[0].classList.contains('wf-active') != true) {
+                    document.getElementsByTagName("html")[0].classList.add('loading-delay');
+                }
+            }, 3000);
+
+        </script>
     </div>
-    <!--<div class="top_bg">
-        <img src="img/アセット 63@2x.png" alt="top_bg">
-    </div>^-->
-    <!--ヘッダー-->
-    <header>
-        <div class="header_wrap">
-            <div class="header_title">
-                <h2 class="title">About me</h2>
-                <h3 class="heading">「大切な想いを沢山の人に知ってもらいたい」<br>
-                    伝える人と見る人が繋がる架け橋のようなwebデザイナーをめざしてます。
-                </h3>
-            </div>
-        </div>
-    </header>
-
-    <section id="aboutme">
-        <div class="aboutme_top">
-            <img src="img/アセット 65@2x.png" alt="about_me">
-        </div>
-        <div class="name">
-            <img src="img/アセット 62@2x.png" alt="name">
-            <p class="name_text">hikari wakamura</p>
-        </div>
-        <div class="profile">
-            <p class="profile_text">東京で生まれ育ちこのまま東京を出ることはないだろうと思っていたら結婚後まさかの大阪へ引越し。<br>
-                現在は長男（サッカー、Switch、ポケモンをこよなく愛するバトル好き男子）、次男（最近一人将棋にハマり中）
-                、末娘（マリーアントワネットも驚くワガママ女王様）の育児と子供服のハンドメイド販売をしながらwebデザインの勉強をしています。</p>
-            <img class="profile_img" src="img/アセット 60@2x.png" alt="profile_img">
-        </div>
-        <div class="skill">
-            <img class="skill_img" src="img/アセット 61@2x.png" alt="skill">
-            <p class="skill_text">Illustrator/Photoshop/HTML/css</p>
-        </div>
-    </section>
-
-    <section id="sarvice">
-        <h2 class="service_title">Service</h2>
-        <div class="web">
-            <div class="webitem">
-                <span class="item_title">WEBデザイン</span>
-                <span class="item_lead">[illustrator・Photoshop]</span>
-            </div>
-            <P class="item_text">目的達成・問題解決はもちろん、
-                お客様の想いやユーザー目線を忘れず使いやすいWebデザインをご提案します。バナー制作もお気軽にお問合せください。</P>
-        </div>
-        <div class="coding">
-            <div class="codingitem">
-                <span class="item_title">コーディング</span>
-                <span class="item_lead">[HTML・CSS・Jquery・WordPress]</span>
-            </div>
-            <P class="item_text">HTML&CSSを用いてデザインカンプから再現性の高いコーディングができます。
-                また、スマートフォンに対応したサイトやJavascriptを使用した動きのあるサイト作成も可能。デザインに込められた思いをサイト上に表現したします。</P>
-        </div>
-    </section>
-
-    <footer>
-        <div class="contact">
-            <h2 class="contact_title">contact</h2>
-            <p class="text1">あなたの大切な想いをカタチにするお手伝いいたします。<br>
-                まずはお気軽にご相談ください。無料相談・お見積りいたします。</p>
-            <a href="#contact"><img class="contact_img" src="img/アセット 31@2x.png" alt="contact"></a>
-            <p class="text2">※セールスなどのお問合せ・ご相談は返信できかねますのでご遠慮ください</p>
-        </div>
-        <p class="footer_text">© wakamura hikari,DESIGN.</p>
-    </footer>
 </body>

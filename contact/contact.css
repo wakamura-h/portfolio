@@ -53,6 +53,14 @@ img {
 body{
     background-color: #ffffff;
 }
+/*font読み込み遅延対策*/
+html {
+    visibility: hidden;
+}
+html.wf-active,
+html.loading-delay {
+    visibility: visible;
+}
 
 
 /*/////トップページ/////*/

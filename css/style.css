@@ -53,7 +53,14 @@ img {
 body{
     background-color: #ffffff;
 }
-
+/*font読み込み遅延対策*/
+html {
+    visibility: hidden;
+}
+html.wf-active,
+html.loading-delay {
+    visibility: visible;
+}
 
 /*/////トップページ/////*/
 /*///PC版///*/
@@ -104,18 +111,22 @@ body{
 /*title文字アニメーション*/
 .title {
     width: 100%;
-    display: flex;
-    overflow: hidden;
+    display: block;
+    text-align: center;
     font-size: 40px;
     font-family: zen-kurenaido, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
-.title {
-    display: block;
-    opacity:0;
-    text-align: center;
+
+.title span{opacity: 0;}
+.title.appeartext span{ animation:text_anime_on 2s ease-out forwards; }
+@keyframes text_anime_on {
+    0% {opacity:0;}
+    100% {opacity:1;}
 }
+
+
 
 .header_animation{
     display: block;

@@ -23,9 +23,7 @@
                     a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { }
                 }; s.parentNode.insertBefore(tk, s)
         })(document);
-    </script>
 
-    <script>
         (function (d) {
             var config = {
                 kitId: 'cmg6hmb',
@@ -41,14 +39,20 @@
     </script>
 
     <!--link-->
-
+    <link rel="stylesheet" type="text/css"
+        href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-11/css/reset.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-11/css/8-11.css">
 
     <!--css-->
     <link rel="stylesheet" href="css/style.css">
 
     <!--プラグイン読み込み-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    <!--title文字アニメーション-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-11/js/8-11.js"></script>
 
 </head>
 
@@ -90,17 +94,19 @@
         <!--制作実績一覧-->
         <div class="work_wrap">
             <div class="work_list">
+                <!--一列目-->
                 <div class="unit1">
-                    <img src="img/アセット 40@2x.png" alt="wor1">
+                    <a href="workdetail/lotion.html"><img src="img/アセット 40@2x.png" alt="wor1"></a>
                 </div>
                 <div class="unit1_center">
-                    <img src="img/アセット 39@2x.png" alt="wor1">
+                    <a href="workdetail/portfolio.html"><img src="img/アセット 77@2x.png" alt="wor1"></a>
                 </div>
                 <div class="unit1">
                     <img src="img/アセット 57@2x.png" alt="wor3">
                 </div>
             </div>
             <div class="work_list">
+                <!--二列目-->
                 <div class="unit2_left">
                     <img src="img/アセット 58@2x.png" alt="wor1">
                 </div>
@@ -109,6 +115,7 @@
                 </div>
             </div>
             <div class="work_list">
+                <!--三列目-->
                 <div class="unit3">
                     <img src="img/アセット 34@2x.png" alt="wor1">
                 </div>
@@ -124,6 +131,8 @@
         </div>
     </section>
 
+
+    <!--contact-->
     <section class="contact">
         <div class="contact_wrap">
             <h2 class="contact_title">contact</h2>
@@ -142,32 +151,54 @@
     </footer>
 
     <script>
-        // アニメーションさせたいクラス
-        var container = $(".title");
-        // アニメーションスピード
-        var speed = 120;
+        // フォント読み込みエラー対策
+        setTimeout(function () {
+            if (document.getElementsByTagName("html")[0].classList.contains('wf-active') != true) {
+                document.getElementsByTagName("html")[0].classList.add('loading-delay');
+            }
+        }, 3000);
 
-        // テキストの間にスペースを入る
-        var content = container.html();
-        var text = $.trim(content);
-        var newHtml = "";
 
-        // スペースで区切ったテキストを、テキストの数だけspanで囲む
-        text.split("").forEach(function (v) {
-            newHtml += '<span>' + v + '</span>';
+        // title文字アニメーション
+        function EachTextAnimeControl() {
+            $('.title').each(function () {
+                var elemPos = $(this).offset().top - 50;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll >= elemPos - windowHeight) {
+                    $(this).addClass("appeartext");
+
+                } else {
+                    $(this).removeClass("appeartext");
+                }
+            });
+        }
+        $(window).on('load', function () {
+            //spanタグを追加する
+            var element = $(".title");
+            element.each(function () {
+                var text = $(this).text();
+                var textbox = "";
+                text.split('').forEach(function (t, i) {
+                    if (t !== " ") {
+                        if (i < 10) {
+                            textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
+                        } else {
+                            var n = i / 10;
+                            textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
+                        }
+
+                    } else {
+                        textbox += t;
+                    }
+                });
+                $(this).html(textbox);
+            });
+            EachTextAnimeControl();
         });
 
-        // spanで囲んだテキスト群をHTMLに戻す
-        container.html(newHtml);
-
-        // 1文字ずつ表示
-        var txtNum = 0;
-        container.css({ opacity: 1 });
-        setInterval(function () {
-            container.find('span').eq(txtNum).css({ opacity: 1 });
-            txtNum++
-        }, speed);
     </script>
+
 
 </body>
 
