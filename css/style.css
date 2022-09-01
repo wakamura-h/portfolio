@@ -180,7 +180,9 @@ html.loading-delay {
     top: 12px;
 }
 /*openした時*/
-
+.open span {
+    background: transparent;
+}
 .open span::before{
     bottom: 0px;
     transform: rotate(45deg);
