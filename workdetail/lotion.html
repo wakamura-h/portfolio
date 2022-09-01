@@ -42,19 +42,18 @@
 
 
     <!--=====link=====-->
-    <link rel="stylesheet" type="text/css"
-        href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/3-2-3-1/css/reset.css">
-    <link rel="stylesheet" type="text/css"
-        href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/3-2-3-1/css/3-2-3-1.css">
+
     <!--=====css=====-->
     <link rel="stylesheet" href="css/lotion.css">
 
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
 
 
 <body>
+    <!--=============PC=============-->
     <!--=====左右ナビ=====-->
     <div class="bg">
         <div class="global-navigation">
@@ -69,9 +68,22 @@
                     <li><a href="../contact/index.html">Contact</a></li>
                 </ul>
             </nav>
+            <!--=============sp=============-->
+            <div class="title_sp">
+                <h2>Work</h2>
+            </div>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="../index.html">to TOP</a></li>
+                    <li><a href="../about me/index.html">About me</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
 
         <!--=====ヘッダー=====-->
+
         <header id="workdetail">
             <h2 class="title">Work</h2>
         </header>
@@ -81,8 +93,8 @@
         <section class="main">
             <div class="main_wrap">
                 <div class="fadeUpTrigger">
-                    <div class="thumbnail">
-                        <div class="thumbnail2">
+                    <div class="before">
+                        <div class="before2">
                             <div class="thumbnail_img">
                                 <img src="img/lotionbanner.png" alt="化粧水広告">
                             </div>
@@ -144,33 +156,47 @@
             }
         }, 3000);
 
+        // ハンバーガーメニュー
+        $(function () {
+            $('.sp_btn,.sp_nav li').click(function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            });
+        });
+
 
         // 動きのきっかけとなるアニメーションの名前を定義
         function fadeAnime() {
             //ふわっと動くきっかけのクラス名と動きのクラス名の設定
             $('.fadeUpTrigger').each(function () { //fadeInUpTriggerというクラス名が
-                var elemPos = $(this).offset().top - 50; //要素より、50px上の
+                var elemPos = $(this).offset().top + 500; //要素より、50px上の
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
                 if (scroll >= elemPos - windowHeight) {
                     $(this).addClass('fadeUp');
+
                     // 画面内に入ったらfadeInというクラス名を追記
                 } else {
                     $(this).removeClass('fadeUp');
+
                     // 画面外に出たらfadeInというクラス名を外す
                 }
             });
 
             //関数でまとめることでこの後に違う動きを追加することが出来ます
             $('.fadeDownTrigger').each(function () { //fadeInDownTriggerというクラス名が
-                var elemPos = $(this).offset().top - 50; //要素より、50px上の
+                var elemPos = $(this).offset().top + 500;
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
                 if (scroll >= elemPos - windowHeight) {
                     $(this).addClass('fadeDown');
+                    $(before).addClass('thumbnail');
+                    $(before2).addClass('thumbnail2');
                     // 画面内に入ったらfadeDownというクラス名を追記
                 } else {
                     $(this).removeClass('fadeDown');
+                    $(before).removeClass('thumbnail');
+                    $(before2).removeClass('thumbnail2');
 
                     // 画面外に出たらfadeDownというクラス名を外す
                 }
@@ -181,9 +207,8 @@
             fadeAnime();/* アニメーション用の関数を呼ぶ*/
         });// ここまで画面をスクロールをしたら動かしたい場合の記述
     </script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/3-2-3-1/js/3-2-3-1.js"></script>
+
+
 
 
 

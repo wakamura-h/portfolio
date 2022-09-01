@@ -167,6 +167,8 @@ html.loading-delay {
     display: block;
     margin: 0 auto;
     padding: 100px 200px 0 200px;
+    position: relative;
+    z-index: 100;
 }
 .form_item{
     border-top: 1px solid transparent;

@@ -48,6 +48,29 @@ img {
     vertical-align: bottom;
     border: none;
 }
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+::before , ::after {
+	box-sizing: inherit;
+}
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: inherit;
+	vertical-align: middle;
+	text-align: inherit;
+	font: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+
 
 /*/////サイト全体/////*/
 body{
@@ -57,8 +80,7 @@ body{
     background-image: url(../img/72@2x.png),url(../img/73@2x.png),url(../img/71@2x.png),url(../img/74@2x.png);
     background-position:left top 400px,center top 300px,right bottom 800px,left bottom 80px;
     background-repeat:no-repeat,no-repeat,no-repeat,no-repeat;
-    background-size: 43%,10%,35%,28%;
-
+    background-size: 43%,10%,35%,20%;
 }
 /*font読み込み遅延対策*/
 html {
@@ -69,9 +91,25 @@ html.loading-delay {
     visibility: visible;
 }
 
+@media screen and (max-width:767px){
+.bg{
+    background-image: url(../img/73@2x.png);
+    background-position:center top 300px;
+    background-size: 20%;
+
+}
+}
 
 /*/////トップページ/////*/
 /*///PC版///*/
+/*スマホ用メニューをPCでは消す*/
+.sp_nav {
+    display: none;
+}
+.sp_btn {
+    display: none;
+}
+
 /*ナビの追順*/
 .global-navigation{
     display: flex;
@@ -98,6 +136,7 @@ html.loading-delay {
     font-size: 25px;
     margin-left: 65px;
 }
+
 /*左側縦書き*/
 .side_box{
     writing-mode:vertical-rl;
@@ -113,6 +152,86 @@ html.loading-delay {
     font-size: 25px;
     line-height: 2.08;
 }
+@media screen and (max-width:1100px){
+    .pc_nav{
+        display: none; /*ps消す*/
+    }
+    /*///ハンバーガーメニュー//*/
+    .sp_btn{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top:  15px;
+        height: 30px;
+        z-index: 300;
+    }
+    .sp_btn span {
+        background: black;
+        display: block;
+        width: 33px;/*長さ*/
+        height: 1px;/*線の太さ*/
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+        }
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: '';
+        background: black;
+        display: block;
+        width: 33px;
+        height: 1px;
+        position: absolute;
+        transition: 0.3s;   
+        }
+    .sp_btn span::before{
+        bottom: 12px;
+    } 
+    .sp_btn span::after{
+        top: 12px;
+    }
+    /*openした時*/
+    .open span {
+        background: transparent;
+    }
+    .open span::before{
+        bottom: 0px;
+        transform: rotate(45deg);
+    } 
+    .open span::after{
+        top: 0px;
+        transform: rotate(135deg);
+    }
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,0.8);
+        text-align: center;
+        transition: 1s;
+        z-index: 10;
+    }
+    .sp_nav ul{
+        height: 100%;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+    }
+    .sp_nav li {
+        padding: 20px 0;
+        color: black;
+        font-family: m-plus-2p,sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 15px;
+        text-align: center;
+    }
+    }
+
+
+
 
 /*/////header/////*/
 .title{
@@ -124,9 +243,27 @@ html.loading-delay {
     margin-bottom: 500px;
 
 }
+.title_sp{
+    display: none;
+}
+@media screen and (max-width:767px){
+    .title{
+        display: none;
+    }
+    .title_sp{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .title_sp h2{
+        font-size: 60px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 100px;
+    }
+}
 
 /*/////制作実績内容/////*/
-
 .main_wrap{
     display: block;
     margin: 0 auto;
@@ -148,7 +285,7 @@ html.loading-delay {
 /*ふわっと出る*/
 /* fadeUp */
 .fadeUp{
-    animation-name:fadepAnime;;
+    animation-name:fadeUpAnime;;
     animation-duration:0.5s;
     animation-fill-mode:forwards;
     opacity:0;
@@ -344,3 +481,5 @@ dd{
     text-align: center;
     margin:100px 0 100px 0;
 }
+
+

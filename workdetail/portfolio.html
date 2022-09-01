@@ -41,8 +41,6 @@
     </script>
 
 
-
-
     <!--css-->
     <link rel="stylesheet" href="css/portfolio.css">
 </head>
@@ -64,64 +62,78 @@
                 </ul>
             </nav>
         </div>
-        <!--ヘッダー-->
+        <!--=====ヘッダー=====-->
         <header id="workdetail">
             <h2 class="title">Work</h2>
         </header>
 
-
-        <!--実績内容-->
+        <!--=====実績内容=====-->
         <section class="main">
             <div class="main_wrap">
-                <div class="work_main">
-                    <div class="work_maimimg">
-                        <img class="pc_modal" src="img/47@2x.png" alt="pc_view">
-                        <img class="main_img" src="img/portfolip@2x.png" alt="pc_img">
-                        <img class="sp_modal" src="img/45@2x.png" alt="sp_view">
+                <div class="fadeUpTrigger">
+                    <div class="thumbnail">
+                        <div class="thumbnail2">
+                            <div class="thumbnail_img">
+                                <!-- オーバーレイ -->
+                                <div class="overlay"></div>
+                                <!-- モーダルウィンドウ -->
+                                <div class="modal">
+                                    <div class="button_close">close ×</div>
+                                    <img src="workdetail/img/top.png">
+                                    <img src="workdetail/img/work.png">
+                                    <img src="workdetail/img/me.png">
+                                    <img src="workdetail/img/contact.png">
+                                    <!-- スクロールで高さを出すためのsectionタグ -->
+                                    <section></section>
+                                    <a href="#" class="pc_btn"><img class="pc" src="img/79@2x.png" alt="pc_view"></a>
+                                </div>
+                                <img class="main_img" src="img/portfolip@2x.png" alt="pc_img">
+                                <a href="#" class="sp_btn"><img class="sp" src="img/78@2x.png" alt="sp_view"></a>
+                                <p>Prtfolio(当サイト)</p>
+
+                            </div>
+                        </div>
                     </div>
-                    <p>Prtfolio(当サイト)</p>
+                    <div class="desc">
+                        <h3>概要</h3>
+                        <dl>
+                            <dt>カテゴリ</dt>
+                            <dd>ポートフォリオサイト</dd>
+                            <dt>担当範囲</dt>
+                            <dd>デザイン / コーディング</dd>
+                            <dt>使用ツール</dt>
+                            <dd>Illustrator / Photoshop </dd>
+                            <dt>制作時間</dt>
+                            <dd>1ヶ月</dd>
+
+                        </dl>
+                    </div>
+                    <div class="capture">
+                        <h3>ポイント</h3>
+                        <p>私のことや制作実績を知ってもらうと同時に、 現在のWebデザインのスキルをお客様や採用担当者の方に伝えるために制作。メインビジュアルは色々な人の想いにデザインというCOLORを
+                            合わせることでいくつもの可能性があることを表現しました。サイト全体的にモノクロからカラーへ変わることを意識してサイトに訪れた人の見たいものを強調させることにより、
+                            色々なページや作品を見てみたい思ってボタンをクリックしていただけるよう工夫しました。
+                        </p>
+                        <a href="../index.html"><img src="img/アセット 41@2x.png" alt="back"></a>
+                    </div>
                 </div>
+        </section>
+        <!--contact-->
+        <section class="contact">
+            <div class="contact_wrap">
+                <h2 class="contact_title">contact</h2>
+                <p class="text1">あなたの大切な想いをカタチにするお手伝いいたします。<br>
+                    まずはお気軽にご相談ください。無料相談・お見積りいたします。</p>
+                <a href="../contact/index.html"><img src="img/アセット 31@2x.png" alt="contact"></a>
+                <p class="text2">※セールスなどのお問合せ・ご相談は返信できかねますのでご遠慮ください</p>
             </div>
-
-            <div class="desc">
-                <h3>概要</h3>
-                <dl>
-                    <dt>カテゴリ</dt>
-                    <dd>バナー制作</dd>
-                    <dt>担当範囲</dt>
-                    <dd>デザイン</dd>
-                    <dt>使用ツール</dt>
-                    <dd>Photoshop</dd>
-                    <dt>制作時間</dt>
-                    <dd>一週間</dd>
-
-                </dl>
+        </section>
+        <!--footer-->
+        <footer>
+            <p class="footer_text">© wakamura hikari,DESIGN.</p>
+            <div class="footer_img">
             </div>
-            <div class="capture">
-                <h3>ポイント</h3>
-                <p>ターゲットはお子様や家庭の都合でフルタイムではなく、ご自身のライフスタイルに合わせて働く女性であったためフォントは丸みのある優しいもので女性らしを表しました。
-                    配色も前向きに見えるよう明るく元気な印象を与える色を選び、全体的に見る人の目を引くデザインにしました。
-                </p>
-                <a href="../index.html"><img src="img/アセット 41@2x.png" alt="back"></a>
-            </div>
-    </div>
-    </section>
-    <!--contact-->
-    <section class="contact">
-        <div class="contact_wrap">
-            <h2 class="contact_title">contact</h2>
-            <p class="text1">あなたの大切な想いをカタチにするお手伝いいたします。<br>
-                まずはお気軽にご相談ください。無料相談・お見積りいたします。</p>
-            <a href="../contact/index.html"><img src="img/アセット 31@2x.png" alt="contact"></a>
-            <p class="text2">※セールスなどのお問合せ・ご相談は返信できかねますのでご遠慮ください</p>
-        </div>
-    </section>
-    <!--footer-->
-    <footer>
-        <p class="footer_text">© wakamura hikari,DESIGN.</p>
-        <div class="footer_img">
-        </div>
-    </footer>
+        </footer>
     </div>
 
 
@@ -135,5 +147,18 @@
             }
         }, 3000);
 
+
+        $(function () {
+            $('.js-open').click(function () {
+                $("body").addClass("no_scroll"); // 背景固定させるクラス付与
+                var id = $(this).data('id'); // 何番目のキャプション（モーダルウィンドウ）か認識
+                $('#overlay, .modal-window[data-id="modal' + id + '"]').fadeIn();
+            });
+            $('.js-close').click(function () {
+                $("body").removeClass("no_scroll"); // 背景固定させるクラス削除
+                $('#overlay, .modal-window').fadeOut();// オーバーレイクリックでもモーダルを閉じるように
+
+            });
+        });
     </script>
 </body>
