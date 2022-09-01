@@ -165,7 +165,7 @@ html.loading-delay {
 .sp_btn span::before,
 .sp_btn span::after {
     content: '';
-    background: black;
+    background-image: url(img/sp4@2x.png);
     display: block;
     width: 33px;
     height: 1px;
