@@ -33,10 +33,6 @@ a {
     transition: 0.3s;
 }
 
-/*ボタンにマウスを置くとちょっと変化する 今回は半透明になる変化*/
-a:hover {
-    opacity: 0.5;
-}
 
 ul {
     /*左の「・」を消す*/
@@ -81,12 +77,16 @@ html.loading-delay {
 
 /*ナビの追順*/
 .global-navigation{
-    display: flex;
-    justify-content: space-between;
     position: fixed;
     top:20px;
-    z-index: 500;;
-    
+    z-index: 500;
+    left: 90%;
+}
+.side_box{
+    display: block;
+    position: fixed;
+    top:20px;
+    z-index: 500;
 }
 
 /*web design / cording*/
@@ -109,29 +109,42 @@ html.loading-delay {
 .side_box{
     writing-mode:vertical-rl;
 }
-
-@media screen and (max-width:767px){
-    .side_box h2{
-        font-size: 10px;
-        margin-left: 10px;
-    }
-    .side_box h3{
-        font-size: 20px;
-        margin-left: 15px;
-    }
-}
-
 /*グローバルナビ*/
-.pc_nav{
-    width: 100%;
-}
 .pc_nav li{
     font-family: m-plus-2p,sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 25px;
-    line-height: 2.08;
+    font-size: 20px;
+    line-height: 2.5;
 }
+.pc_nav li a{
+	position: relative;    /*テキストの基点*/
+	overflow: hidden;    /*はみ出る要素を隠す*/
+	padding: 5px 60px;
+    transition: all .2s;
+}
+
+.pc_nav li span{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transition: all .5s;    /*アニメーションの指定*/
+	transform: translate(-50%, 0);/*X方向に-50% ※中央寄せにするため*/
+	display: block;   /*テキスト折り返しなし*/
+	white-space: nowrap;
+}
+/*差し替わるテキストの設定*/
+.pc_nav li span:nth-child(2){
+	opacity:0;
+}
+/*hoverするとテキストが入れ替わる設定*/
+.pc_nav li:hover span:nth-child(1){
+	opacity:0;
+}
+.pc_nav li:hover span:nth-child(2){
+	opacity:1;
+}
+
 
 /*スマホ用メニューをPCでは消す*/
 .sp_nav {
@@ -141,18 +154,19 @@ html.loading-delay {
     display: none;
 }
 
+
 @media screen and (max-width:1100px){
 .pc_nav{
     display: none; /*ps消す*/
 }
-/*///ハンバーガーメニュー//*/
+/*//////ハンバーガーメニュー//////*/
 .sp_btn{
     display: block;
-    position: absolute;
+    position: fixed;
     right: 20px;
     top:  15px;
     height: 30px;
-    z-index: 300;
+    z-index: 800;
 }
 .sp_btn span {
     background: black;
@@ -198,6 +212,8 @@ html.loading-delay {
     width: 100%;
     height: 100vh;
     background-image: url(../img/sp20@2x.png);
+    background-repeat:no-repeat;
+    background-size: cover;
     text-align: center;
     transition: 1s;
     z-index: 10;
@@ -214,8 +230,57 @@ html.loading-delay {
     font-family: m-plus-2p,sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
+}
+}
+/*//////sp版//////*/
+@media screen and (max-width:767px){
+    .side_box h2{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    .side_box h3{
+        font-size: 20px;
+        margin-left: 15px;
+    }
+}
+
+
+
+/*/////header/////*/
+.header_wrap{
+display: block;
+max-width: 1000px;
+margin: 0 auto;
+text-align: center;
+}
+.title{
+font-family: m-plus-2p,sans-serif;
+font-weight: 300;
+font-style: normal;
+font-size: 90px;
+margin-top: 165px;
+}
+.heading{
+font-size: 19px;
+line-height: 2.1;
+font-weight: lighter;
+margin-top: 60px;
+}
+
+@media screen and (max-width:767px){
+.title{
+    font-size: 60px;
+}
+.header_wrap{
+    width: 100%;
+}
+.heading{
+    font-size: 14px;
+    line-height: 2.1;
+    width: 70%;
+    margin: 55px auto 0;
 }
 }
 
@@ -328,7 +393,8 @@ html.loading-delay {
     font-size: 90px;
     top: 80%;
     left: 50%;
-    transform: translate(-50%, -50%);    
+    transform: translate(-50%, -50%); 
+    margin-bottom: 200px;
 }
 
 /*work作品一覧*/
@@ -339,16 +405,17 @@ html.loading-delay {
 .work_list{
     display: flex;
     justify-content: space-between;
+    margin-top: 100px;
 }
 /*作品一覧の基本設定*/
 .unit1,.unit2_left,.unit2_right,.unit3{
-    width: 257px;
-    margin-top: 60px;
+    width: 27%;
+    margin-top: 100px;
 }
 /*作品一覧一列目*/
 .unit1_center{
-    width: 257px;
-    margin-top: 160px;
+    width: 27%;
+    margin-top: 200px;
 }
 /*作品一覧二列目*/
 .unit2_left{
@@ -359,11 +426,11 @@ html.loading-delay {
 }
 /*作品一覧三列目*/
 .unit3_center{
-    width: 257px;
-    margin-top: 140px;
+    width: 27%;
+    margin-top: 180px;
 }
 .unit3_right{
-    width: 257px;
+    width: 27%;
     margin-top: 240px;
 }
 /*dot*/
@@ -394,10 +461,38 @@ html.loading-delay {
     filter: grayscale(0%);
 }
 
+/*制作実績　ランダムな動き*/
+.delay-time02{
+    animation-delay: 0.2s;/* アニメーションスタートの遅延時間を決めるCSS*/
+}
+.delay-time03{
+    animation-delay: 0.3s;
+}
+.box{
+    opacity: 0;  /*スタート時は要素自体を透過*/
+}
+.fadeUp {
+    animation-name:fadeUpAnime;  /*ふわりとさせる*/
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .work_sp{
     display: none;/*sp隠す*/
 }
-
 @media screen and (max-width:767px){
     .dot_green,.work_list{
         display: none; /*pc隠す*/
@@ -470,14 +565,15 @@ html.loading-delay {
     }
     /* next */
     .slick-next {
-        left: 323px;
+        right: 0;
+        margin-left: auto;
     }
     .slick-next::after {
         transform: rotate(45deg);
     }
     /* prev */
     .slick-prev {
-        right: 363px;
+        margin-right: auto;
     }
     .slick-prev::after {
         transform: rotate(-135deg);
@@ -506,8 +602,8 @@ html.loading-delay {
         font-style: normal;
     }
     .about_text{
-        font-size: 15px;
-        line-height: 1.8;
+        font-size: 19px;
+        line-height: 2.7;
         width: 83%;
         margin: 0 auto;
         padding: 35% 0 30% 0;
@@ -519,11 +615,13 @@ html.loading-delay {
         background-size: 90%;
     }
     .toabout{
-        width: 40%;
-        margin:50px auto 0;
+        margin-top: 50px;
     }
     .toabout img{
-        /*制作実績　グレースケールからカラーへ*/
+        width: 45%;
+        display: block;
+        margin: 0 auto;
+        padding:30px 0 30px 0;
         filter: grayscale(100%);
         transition: all 0.3s ease-in;
     }
@@ -531,10 +629,8 @@ html.loading-delay {
         filter: grayscale(0%);
     }
     .toabout_btmimg{
-        width: 60%;
-        display: block;
+        width: 55%;
         margin-left: auto;
-        margin-top: 30px;
     }
 }
 
@@ -575,12 +671,33 @@ html.loading-delay {
 }
 
 @media screen and (max-width:767px){
+.contact_pc_wrap{
+    display: none;
+    width: 70%;
+}
+.contact_sp_wrap{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+.contact_title{
+    font-size: 60px;
+    margin-top: 100px;
+}
+.contact_top_text{
+    font-size: 15px;
+    line-height: 2.1;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
 /*//問い合わせフォーム//*/
 .form {
-    max-width: 800px;
+    width: 100%;
     display: block;
     margin: 0 auto;
-    padding: 100px 50px 0 50px;
+    padding: 50px 10px 0 10px;
     position: relative;
     z-index: 100;
 }
@@ -685,17 +802,26 @@ textarea:focus {
     border: solid 2px #ff9252;
     outline: 0;
 }  
+
 .form_btn{
     margin: 0 auto;
+    display: block;
     width: 300px;
-    padding-top: 50px;
+    padding-top: 60px;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in;
+}
+.form_btn:hover{
+    filter: grayscale(0%);
 }
 }
+
+
 /*/////footer/////*/
 .footer_text{
     font-size: 10px;
     text-align: center;
-    margin-top: 100px;
+    transition: all 0.3s ease-in;
 }
 .footer_pc_img{
     width: 333px;

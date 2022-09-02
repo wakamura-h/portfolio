@@ -62,21 +62,30 @@ html.loading-delay {
     visibility: visible;
 }
 
-
+.bg{
+    background-image: url(img/56@2x.png),url(img/80@2x.png);
+    background-position:left top,left -50px bottom;
+    background-repeat:no-repeat,no-repeat;
+    background-size: 24%,32%;
+}
 /*/////トップページ/////*/
 /*///PC版///*/
 /*ナビの追順*/
 .global-navigation{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: -100px;
-    position: sticky;
-    top:20px
+    position: fixed;
+    top:20px;
+    z-index: 500;
+    left: 90%;
+}
+.side_box{
+    display: block;
+    position: fixed;
+    top:20px;
+    z-index: 500;
 }
 
 /*web design / cording*/
-.global-navigation h2{
+.side_box h2{
     font-family: m-plus-2p,sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -84,7 +93,7 @@ html.loading-delay {
     margin-left: 18px;
 }
 /*Hikari Wakamura Portforio*/
-.global-navigation h3{
+.side_box h3{
     font-family: m-plus-2p,sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -96,9 +105,6 @@ html.loading-delay {
     writing-mode:vertical-rl;
 }
 /*グローバルナビ*/
-.pc_nav{
-    margin-right: 65px;
-}
 .pc_nav li{
     font-family: m-plus-2p,sans-serif;
     font-weight: 300;
@@ -124,14 +130,6 @@ html.loading-delay {
     font-size: 90px;
     margin-top: -100px;
     text-align: start;
-}
-.header_dottop{
-    width: 170px;
-    position: absolute;
-    top: -20%;
-    right: 70%;
-    z-index: -10;
-
 }
 .header_dotbottom{
     width: 137px;
@@ -253,6 +251,11 @@ textarea:focus {
     display: block;
     width: 300px;
     padding-top: 60px;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in;
+}
+.form_btn:hover{
+    filter: grayscale(0%);
 }
 
 .footer_text{
@@ -260,59 +263,3 @@ textarea:focus {
     text-align: center;
     margin: 100px 0 100px 0;
 }
-
-
-@media screen and (max-width: 480px) {
-.form {
-    margin-top: 40px;
-}
-
-.form-item {
-    padding-left: 14px;
-    padding-right: 14px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    flex-wrap: wrap;
-}
-.formitem_label {
-    max-width: inherit;
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-}
-
-.formitem_label,.form_item_msg {
-    margin-top: 0;
-}
-
-.required {
-    border-radius: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    width: 32px;
-    font-size: 10px;
-}
-
-.form_input {
-    margin-left: 0;
-    margin-top: 18px;
-    height: 40px;
-    flex: inherit;
-    font-size: 15px;
-    }
-
-.form_iteme_txtarea {
-    margin-top: 18px;
-    margin-left: 0;
-    height: 200px;
-    flex: inherit;
-    font-size: 15px;
-}
-
-.form_btn {
-    margin-top: 24px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 160px;
-    font-size: 16px;
-}}

@@ -41,19 +41,28 @@
     </script>
 
 
-    <!--css-->
-    <link rel="stylesheet" href="css/portfolio.css">
+    <!--=====link=====-->
+
+    <!--=====css=====-->
+    <link rel="stylesheet" href="css/lotion.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 
 
 <body>
     <div class="bg">
-        <div class="global-navigation">
-            <div class="side_box">
-                <h2>web design / cording</h2>
-                <h3>Hikari Wakamura Portforio</h3>
-            </div>
+        <!--=============PC=============-->
+        <!--=====左右ナビ=====-->
+        <div class="side_box">
+            <h2>web design / cording</h2>
+            <h3>Hikari Wakamura Portforio</h3>
+        </div>
+        <span class="global-navigation">
             <nav class="pc_nav">
                 <ul>
                     <li><a href="../index.html">to TOP</a></li>
@@ -61,84 +70,124 @@
                     <li><a href="../contact/index.html">Contact</a></li>
                 </ul>
             </nav>
-        </div>
+        </span>
+        <!--=============sp=============-->
+        <div class="sp_btn"><span></span></div>
+        <nav class="sp_nav">
+            <ul>
+                <li><a href="../index.html">to TOP</a></li>
+                <li><a href="../about me/index.html">About me</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+
+
         <!--=====ヘッダー=====-->
+
         <header id="workdetail">
             <h2 class="title">Work</h2>
         </header>
+
 
         <!--=====実績内容=====-->
         <section class="main">
             <div class="main_wrap">
                 <div class="fadeUpTrigger">
-                    <div class="thumbnail">
-                        <div class="thumbnail2">
+                    <div class="before">
+                        <div class="before2">
                             <div class="thumbnail_img">
-                                <!-- オーバーレイ -->
-                                <div class="overlay"></div>
-                                <!-- モーダルウィンドウ -->
-                                <div class="modal">
-                                    <div class="button_close">close ×</div>
-                                    <img src="workdetail/img/top.png">
-                                    <img src="workdetail/img/work.png">
-                                    <img src="workdetail/img/me.png">
-                                    <img src="workdetail/img/contact.png">
-                                    <!-- スクロールで高さを出すためのsectionタグ -->
-                                    <section></section>
-                                    <a href="#" class="pc_btn"><img class="pc" src="img/79@2x.png" alt="pc_view"></a>
-                                </div>
-                                <img class="main_img" src="img/portfolip@2x.png" alt="pc_img">
-                                <a href="#" class="sp_btn"><img class="sp" src="img/78@2x.png" alt="sp_view"></a>
-                                <p>Prtfolio(当サイト)</p>
-
+                                <img src="img/portfolip@2x.png" alt="ポートフォリオサイト">
                             </div>
                         </div>
                     </div>
-                    <div class="desc">
-                        <h3>概要</h3>
-                        <dl>
-                            <dt>カテゴリ</dt>
-                            <dd>ポートフォリオサイト</dd>
-                            <dt>担当範囲</dt>
-                            <dd>デザイン / コーディング</dd>
-                            <dt>使用ツール</dt>
-                            <dd>Illustrator / Photoshop </dd>
-                            <dt>制作時間</dt>
-                            <dd>1ヶ月</dd>
+                </div>
 
-                        </dl>
+                <!--=====アコーディオン=====-->
+                <div class="accordion">
+                    <div class="accordion_switch">
+                        <p>PCサイト キャプションン</p>
                     </div>
-                    <div class="capture">
-                        <h3>ポイント</h3>
-                        <p>私のことや制作実績を知ってもらうと同時に、 現在のWebデザインのスキルをお客様や採用担当者の方に伝えるために制作。メインビジュアルは色々な人の想いにデザインというCOLORを
-                            合わせることでいくつもの可能性があることを表現しました。サイト全体的にモノクロからカラーへ変わることを意識してサイトに訪れた人の見たいものを強調させることにより、
-                            色々なページや作品を見てみたい思ってボタンをクリックしていただけるよう工夫しました。
-                        </p>
-                        <a href="../index.html"><img src="img/アセット 41@2x.png" alt="back"></a>
+                    <ul class="toggle_contents">
+                        <li><img src="img/top.png" alt="top"></li>
+                        <li><img src="img/contact.png" alt="contact"></li>
+                        <li><img src="img/top2.png" alt="top2"></li>
+                        <li><img src="img/me.png" alt="aboutme"></li>
+                        <li><img src="img/contact.png" alt="contact"></li>
+                        <li><img src="img/work.png" alt="work"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="caption">
+                    <input type="checkbox" id="toggle1" class="toggle">
+                    <label class="title" for="toggle1">PCサイト キャプション</label>
+                    <div class="content">
+                        <img src="img/top.png" alt="top">
+                        <img src="img/top2.png" alt="top2">
+                        <img src="img/me.png" alt="aboutme">
+                        <img src="img/contact.png" alt="contact">
+                        <img src="img/work.png" alt="work">
                     </div>
                 </div>
-        </section>
-        <!--contact-->
-        <section class="contact">
-            <div class="contact_wrap">
-                <h2 class="contact_title">contact</h2>
-                <p class="text1">あなたの大切な想いをカタチにするお手伝いいたします。<br>
-                    まずはお気軽にご相談ください。無料相談・お見積りいたします。</p>
-                <a href="../contact/index.html"><img src="img/アセット 31@2x.png" alt="contact"></a>
-                <p class="text2">※セールスなどのお問合せ・ご相談は返信できかねますのでご遠慮ください</p>
+                <div class="caption">
+                    <input type="checkbox" id="toggle2" class="toggle">
+                    <label class="title" for="toggle2">スマホサイト キャプション</label>
+                    <div class="content">
+                        <p>本文2</p>
+                    </div>
+                </div>
             </div>
-        </section>
-        <!--footer-->
-        <footer>
-            <p class="footer_text">© wakamura hikari,DESIGN.</p>
-            <div class="footer_img">
-            </div>
-        </footer>
+    </div>
+    <div class="desc">
+        <h3>概要</h3>
+        <dl>
+            <dt>カテゴリ</dt>
+            <dd>サイト制作</dd>
+            <dt>担当範囲</dt>
+            <dd>デザイン/コーディング</dd>
+            <dt>使用ツール</dt>
+            <dd>Illustrator / Photoshop</dd>
+            <dt>制作時間</dt>
+            <dd>一ヶ月</dd>
+
+        </dl>
+    </div>
+    <div class="capture">
+        <h3>ポイント</h3>
+        <p>メインビジュアルでは伝えた『想い』にデザインというカラーを足すことで沢山の可能性があることを表現しました。実績を伝え、お問い合わせ・ご依頼を頂くことがサイトの目的であるため
+            サイト全体的にシンプルにすることによって見せたいものを目立たせてシンプルに伝わるように回遊性も考慮して制作しました。
+            またレスポンシブ対応として小さな画面で見た時にスクロールが長すぎないようボタンなどを使って工夫しました。
+        </p>
+        <a href="../index.html"><img src="img/アセット 41@2x.png" alt="back"></a>
+    </div>
+    </div>
+    </section>
+
+    <!--=====contact=====-->
+    <section class="contact">
+        <div class="contact_wrap">
+            <h2 class="contact_title">contact</h2>
+            <p class="text1">あなたの大切な想いをカタチにするお手伝いいたします。<br>
+                まずはお気軽にご相談ください。無料相談・お見積りいたします。</p>
+            <a href="../contact/index.html"><img src="img/アセット 31@2x.png" alt="contact"></a>
+            <p class="text2">※セールスなどのお問合せ・ご相談は返信できかねますのでご遠慮ください</p>
+        </div>
+    </section>
+
+    <!--=====footer=====-->
+    <footer>
+        <p class="footer_text">© wakamura hikari,DESIGN.</p>
+        <div class="footer_img">
+        </div>
+    </footer>
     </div>
 
 
 
     </section>
+
+
     <script>
         // フォント読み込みエラー対策
         setTimeout(function () {
@@ -147,18 +196,49 @@
             }
         }, 3000);
 
-
+        // ハンバーガーメニュー
         $(function () {
-            $('.js-open').click(function () {
-                $("body").addClass("no_scroll"); // 背景固定させるクラス付与
-                var id = $(this).data('id'); // 何番目のキャプション（モーダルウィンドウ）か認識
-                $('#overlay, .modal-window[data-id="modal' + id + '"]').fadeIn();
-            });
-            $('.js-close').click(function () {
-                $("body").removeClass("no_scroll"); // 背景固定させるクラス削除
-                $('#overlay, .modal-window').fadeOut();// オーバーレイクリックでもモーダルを閉じるように
-
+            $('.sp_btn,.sp_nav li').click(function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
             });
         });
+
+
+        // 動きのきっかけとなるアニメーションの名前を定義
+        function fadeAnime() {
+            //ふわっと動くきっかけのクラス名と動きのクラス名の設定
+            $('.fadeUpTrigger').each(function () { //fadeInUpTriggerというクラス名が
+                var elemPos = $(this).offset().top + 200; //要素より、50px上の
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll >= elemPos - windowHeight) {
+                    $(this).addClass('fadeUp');
+                    $('.before').addClass('thumbnail');
+                    $('.before2').addClass('thumbnail2');
+                    // 画面内に入ったらfadeInというクラス名を追記
+                } else {
+                    $(this).removeClass('fadeUp');
+                    $('.before').removeClass('thumbnail');
+                    $('.before2').removeClass('thumbnail2');
+                    // 画面外に出たらfadeInというクラス名を外す
+                }
+            });
+        }
+        $(window).scroll(function () {
+            fadeAnime();/* アニメーション用の関数を呼ぶ*/
+        });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+
+        $('.accordion_switch').on('click', function () {
+            $(this).toggleClass('open');
+            $(this).next('.toggle_contents').slideToggle();
+        });
     </script>
+
+
+
+
+
+
 </body>

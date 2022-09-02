@@ -70,7 +70,7 @@ html.loading-delay {
 @media screen and (max-width:767px){
     .bg{
         background-image: url(img/sp24@2x.png),url(img/sp25@2x.png);
-        background-position: right bottom,right bottom 300px;
+        background-position: right bottom,right bottom 100px;
         background-repeat:no-repeat,no-repeat;
         background-size: 30%,14%;
     }
@@ -80,12 +80,16 @@ html.loading-delay {
 /*///PC版///*/
 /*ナビの追順*/
 .global-navigation{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: -100px;
-    position: sticky;
-    top:20px
+    position: fixed;
+    top:20px;
+    z-index: 500;
+    left: 90%;
+}
+.side_box{
+    display: block;
+    position: fixed;
+    top:20px;
+    z-index: 500;
 }
 
 /*web design / cording*/
@@ -108,22 +112,7 @@ html.loading-delay {
 .side_box{
     writing-mode:vertical-rl;
 }
-
-@media screen and (max-width:767px){
-    .side_box h2{
-        font-size: 10px;
-        margin-left: 10px;
-    }
-    .side_box h3{
-        font-size: 20px;
-        margin-left: 15px;
-    }
-}
 /*グローバルナビ*/
-.pc_nav{
-    margin-right: 65px;
-    position: relative;
-}
 .pc_nav li{
     font-family: m-plus-2p,sans-serif;
     font-weight: 300;
@@ -146,11 +135,11 @@ html.loading-delay {
     /*///ハンバーガーメニュー//*/
     .sp_btn{
         display: block;
-        position: absolute;
+        position: fixed;
         right: 20px;
         top:  15px;
         height: 30px;
-        z-index: 300;
+        z-index: 800;
     }
     .sp_btn span {
         background: black;
@@ -195,7 +184,9 @@ html.loading-delay {
         left: 0;
         width: 100%;
         height: 100vh;
-        background: rgba(0,0,0,0.8);
+        background-image: url(../img/sp20@2x.png);
+        background-repeat:no-repeat;
+        background-size: cover;
         text-align: center;
         transition: 1s;
         z-index: 10;
@@ -212,10 +203,16 @@ html.loading-delay {
         font-family: m-plus-2p,sans-serif;
         font-weight: 300;
         font-style: normal;
-        font-size: 15px;
+        font-size: 18px;
         text-align: center;
     }
-    }
+}
+@media screen and (max-width:767px){
+    /*Hikari Wakamura Portforio*/
+.side_box{
+    display: none;
+}
+}
 
 
 /*/////header/////*/
@@ -230,7 +227,7 @@ html.loading-delay {
     font-weight: 300;
     font-style: normal;
     font-size: 90px;
-    margin-top: -100px;
+    margin-top: 165px;
 }
 .heading{
     font-size: 19px;
@@ -269,7 +266,6 @@ html.loading-delay {
 
 .name_item{
     width: 24%;
-    padding-left: 10%;
 }
 .name_text{
     font-size: 40px;
@@ -295,14 +291,13 @@ html.loading-delay {
 }
 .skill_item{
     width: 23%;
-    padding-right: 10%;
 }
 
 .skill_text{
     font-size: 28px;
     font-weight: normal;
     padding:142px 0 0 55px;
-    width: 70%;
+    width: 77%;
 }
 
 .profile_sp,.aboutme_topSP{
@@ -327,7 +322,7 @@ html.loading-delay {
         padding: 65px 15px 0 15px;
     }
     .name_text{
-        width: 100%;
+        width: 70%;
         font-size: 27px;
         font-weight: bold;
         padding: 20px 0 0 0 ; 
@@ -381,10 +376,11 @@ html.loading-delay {
     font-size: 90px;
     text-align: center;
     margin-top: 250px;
+    margin-bottom: 200px;
 }
 
 .webitem,.codingitem{
-    margin-top: 75px;
+    margin-top: 70px;
     display: flex;
 }
 .item_title{
@@ -474,11 +470,16 @@ html.loading-delay {
 
 @media screen and (max-width:767px){
     .contact{
-        width: 70%;
+        width: 100%;
     }
     .contact_title{
         font-size: 60px;
 
+    }
+    .text1{
+        font-size: 16px;
+        line-height: 1.8;
+        margin-top: 70px;
     }
 }
 /*/////footer/////*/

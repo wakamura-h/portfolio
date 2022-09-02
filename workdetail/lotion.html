@@ -53,14 +53,14 @@
 
 
 <body>
-    <!--=============PC=============-->
-    <!--=====左右ナビ=====-->
     <div class="bg">
-        <div class="global-navigation">
-            <div class="side_box">
-                <h2>web design / cording</h2>
-                <h3>Hikari Wakamura Portforio</h3>
-            </div>
+        <!--=============PC=============-->
+        <!--=====左右ナビ=====-->
+        <div class="side_box">
+            <h2>web design / cording</h2>
+            <h3>Hikari Wakamura Portforio</h3>
+        </div>
+        <span class="global-navigation">
             <nav class="pc_nav">
                 <ul>
                     <li><a href="../index.html">to TOP</a></li>
@@ -68,19 +68,17 @@
                     <li><a href="../contact/index.html">Contact</a></li>
                 </ul>
             </nav>
-            <!--=============sp=============-->
-            <div class="title_sp">
-                <h2>Work</h2>
-            </div>
-            <div class="sp_btn"><span></span></div>
-            <nav class="sp_nav">
-                <ul>
-                    <li><a href="../index.html">to TOP</a></li>
-                    <li><a href="../about me/index.html">About me</a></li>
-                    <li><a href="../contact/index.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        </span>
+        <!--=============sp=============-->
+        <div class="sp_btn"><span></span></div>
+        <nav class="sp_nav">
+            <ul>
+                <li><a href="../index.html">to TOP</a></li>
+                <li><a href="../about me/index.html">About me</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+
 
         <!--=====ヘッダー=====-->
 
@@ -169,40 +167,22 @@
         function fadeAnime() {
             //ふわっと動くきっかけのクラス名と動きのクラス名の設定
             $('.fadeUpTrigger').each(function () { //fadeInUpTriggerというクラス名が
-                var elemPos = $(this).offset().top + 500; //要素より、50px上の
+                var elemPos = $(this).offset().top + 200; //要素より、50px上の
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
                 if (scroll >= elemPos - windowHeight) {
                     $(this).addClass('fadeUp');
-
+                    $('.before').addClass('thumbnail');
+                    $('.before2').addClass('thumbnail2');
                     // 画面内に入ったらfadeInというクラス名を追記
                 } else {
                     $(this).removeClass('fadeUp');
-
+                    $('.before').removeClass('thumbnail');
+                    $('.before2').removeClass('thumbnail2');
                     // 画面外に出たらfadeInというクラス名を外す
                 }
             });
-
-            //関数でまとめることでこの後に違う動きを追加することが出来ます
-            $('.fadeDownTrigger').each(function () { //fadeInDownTriggerというクラス名が
-                var elemPos = $(this).offset().top + 500;
-                var scroll = $(window).scrollTop();
-                var windowHeight = $(window).height();
-                if (scroll >= elemPos - windowHeight) {
-                    $(this).addClass('fadeDown');
-                    $(before).addClass('thumbnail');
-                    $(before2).addClass('thumbnail2');
-                    // 画面内に入ったらfadeDownというクラス名を追記
-                } else {
-                    $(this).removeClass('fadeDown');
-                    $(before).removeClass('thumbnail');
-                    $(before2).removeClass('thumbnail2');
-
-                    // 画面外に出たらfadeDownというクラス名を外す
-                }
-            });
-        }//ここまでふわっと動くきっかけのクラス名と動きのクラス名の設定
-        // 画面をスクロールをしたら動かしたい場合の記述
+        }
         $(window).scroll(function () {
             fadeAnime();/* アニメーション用の関数を呼ぶ*/
         });// ここまで画面をスクロールをしたら動かしたい場合の記述

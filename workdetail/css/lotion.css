@@ -48,28 +48,6 @@ img {
     vertical-align: bottom;
     border: none;
 }
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-::before , ::after {
-	box-sizing: inherit;
-}
-button {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	border-radius: 0;
-	background: transparent;
-	color: inherit;
-	vertical-align: middle;
-	text-align: inherit;
-	font: inherit;
-	-webkit-appearance: none;
-	appearance: none;
-}
-
 
 
 /*/////サイト全体/////*/
@@ -78,7 +56,7 @@ body{
 }
 .bg{
     background-image: url(../img/72@2x.png),url(../img/73@2x.png),url(../img/71@2x.png),url(../img/74@2x.png);
-    background-position:left top 400px,center top 300px,right bottom 800px,left bottom 80px;
+    background-position:left top,center top 100px,right bottom 800px,left bottom 80px;
     background-repeat:no-repeat,no-repeat,no-repeat,no-repeat;
     background-size: 43%,10%,35%,20%;
 }
@@ -94,7 +72,7 @@ html.loading-delay {
 @media screen and (max-width:767px){
 .bg{
     background-image: url(../img/73@2x.png);
-    background-position:center top 300px;
+    background-position:left 190px top;
     background-size: 20%;
 
 }
@@ -102,6 +80,48 @@ html.loading-delay {
 
 /*/////トップページ/////*/
 /*///PC版///*/
+/*ナビの追順*/
+.global-navigation{
+    position: fixed;
+    top:20px;
+    z-index: 500;
+    left: 90%;
+}
+.side_box{
+    display: block;
+    position: fixed;
+    top:20px;
+    z-index: 500;
+}
+
+/*web design / cording*/
+.side_box h2{
+    font-family: m-plus-2p,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px;
+    margin-left: 18px;
+}
+/*Hikari Wakamura Portforio*/
+.side_box h3{
+    font-family: m-plus-2p,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    margin-left: 65px;
+}
+/*左側縦書き*/
+.side_box{
+    writing-mode:vertical-rl;
+}
+/*グローバルナビ*/
+.pc_nav li{
+    font-family: m-plus-2p,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 2.08;
+}
 /*スマホ用メニューをPCでは消す*/
 .sp_nav {
     display: none;
@@ -114,12 +134,11 @@ html.loading-delay {
 .global-navigation{
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top:20px;
+    z-index: 500;
     width: 100%;
-    margin-top: -100px;
-    position: sticky;
-    top:20px
 }
-
 /*web design / cording*/
 .global-navigation h2{
     font-family: m-plus-2p,sans-serif;
@@ -141,6 +160,12 @@ html.loading-delay {
 .side_box{
     writing-mode:vertical-rl;
 }
+@media screen and (max-width:767px){
+    .side_box{
+        display: none;
+    }
+}
+
 /*グローバルナビ*/
 .pc_nav{
     margin-right: 65px;
@@ -152,6 +177,14 @@ html.loading-delay {
     font-size: 25px;
     line-height: 2.08;
 }
+/*スマホ用メニューをPCでは消す*/
+.sp_nav {
+    display: none;
+}
+.sp_btn {
+    display: none;
+}
+
 @media screen and (max-width:1100px){
     .pc_nav{
         display: none; /*ps消す*/
@@ -159,11 +192,11 @@ html.loading-delay {
     /*///ハンバーガーメニュー//*/
     .sp_btn{
         display: block;
-        position: absolute;
+        position: fixed;
         right: 20px;
         top:  15px;
         height: 30px;
-        z-index: 300;
+        z-index: 800;
     }
     .sp_btn span {
         background: black;
@@ -208,7 +241,9 @@ html.loading-delay {
         left: 0;
         width: 100%;
         height: 100vh;
-        background: rgba(0,0,0,0.8);
+        background-image: url(../img/sp20@2x.png);
+        background-repeat:no-repeat;
+        background-size: cover;
         text-align: center;
         transition: 1s;
         z-index: 10;
@@ -225,7 +260,7 @@ html.loading-delay {
         font-family: m-plus-2p,sans-serif;
         font-weight: 300;
         font-style: normal;
-        font-size: 15px;
+        font-size: 18px;
         text-align: center;
     }
     }
@@ -240,26 +275,23 @@ html.loading-delay {
     font-style: normal;
     font-size: 90px;
     padding-left:  740px;
-    margin-bottom: 500px;
+    margin:300px 0 300px;
 
 }
 .title_sp{
     display: none;
 }
 @media screen and (max-width:767px){
-    .title{
+    .pc_nav{
         display: none;
     }
-    .title_sp{
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-    }
-    .title_sp h2{
+
+    .title{
         font-size: 60px;
         margin: 0 auto;
         text-align: center;
         margin-top: 100px;
+        padding: 0;
     }
 }
 
@@ -267,19 +299,29 @@ html.loading-delay {
 .main_wrap{
     display: block;
     margin: 0 auto;
-    padding: 0 180px;
+    padding: 30px 180px;
 }
 .thumbnail{
     display: block;  /*block flex*/
     padding: 50px 0 50px 0;
     text-align: center;
-    margin: 200px 170px 0 170px;
+    margin: 0 150px;
 }
 .thumbnail_img{
     width: 65%;
     display: inline-block;
 }
 
+@media screen and (max-width:767px){
+    .main_wrap{
+        width: 100%;
+        padding: 0 ;
+    }
+    .thumbnail{
+        width: 75%;
+        margin: 150px auto 80px;
+    }
+}
 
 /*-----作品アニメーション-----*/
 /*ふわっと出る*/
@@ -430,15 +472,27 @@ dd{
 }
 .capture img{
     width: 28%;
-    margin:70px 0 0 50px ;
+    margin:120px 0 0 50px ;
     filter: grayscale(100%);
     transition: all 0.3s ease-in;
-    padding-top: 30px;
 }
 .capture img:hover{
     filter: grayscale(0%);
 }
 
+@media screen and (max-width:767px){
+    .desc ,.capture{
+        width: 80%;
+        padding: 0 10px;
+    }
+    .capture{
+        margin-top: 50px;
+    }
+    .capture img{
+        width: 43%;
+        margin: 50px 0 0 0;
+    }
+}
 
 
 /*/////contact/////*/
@@ -475,6 +529,12 @@ dd{
     margin-top: 65px;
 }
 
+@media screen and (max-width:767px){
+    .contact{
+        display: none;
+    }
+}
+
 /*/////footer/////*/
 .footer_text{
     font-size: 10px;
@@ -482,4 +542,19 @@ dd{
     margin:100px 0 100px 0;
 }
 
+@media screen and (max-width:767px){
+    .contactPC_img{
+        display: none;
+    }
+    .contactSP_img{
+        display: block;
+        margin:  0 auto;
+    }
+    .footer_img{
+        width: 50%;
+    }
+    .footer_text{
+        padding: 50px 0 30px 0;
+    }
+}
 
