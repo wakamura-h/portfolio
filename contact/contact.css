@@ -109,8 +109,34 @@ html.loading-delay {
     font-family: m-plus-2p,sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 25px;
-    line-height: 2.08;
+    font-size: 20px;
+    line-height: 2.5;
+}
+.pc_nav li a{
+	position: relative;    /*テキストの基点*/
+	overflow: hidden;    /*はみ出る要素を隠す*/
+    padding: 3px;
+    transition: all .2s;
+}
+.pc_nav li span{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transition: all .3s;    /*アニメーションの指定*/
+	transform: translate(-50%, 0);/*X方向に-50% ※中央寄せにするため*/
+	display: block;   /*テキスト折り返しなし*/
+	white-space: nowrap;
+}
+/*差し替わるテキストの設定*/
+.pc_nav li span:nth-child(2){
+	opacity:0;
+}
+/*hoverするとテキストが入れ替わる設定*/
+.pc_nav li:hover span:nth-child(1){
+	opacity:0;
+}
+.pc_nav li:hover span:nth-child(2){
+	opacity:1;
 }
 
 /*/////header/////*/

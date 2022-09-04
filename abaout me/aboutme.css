@@ -112,14 +112,42 @@ html.loading-delay {
 .side_box{
     writing-mode:vertical-rl;
 }
+
 /*グローバルナビ*/
 .pc_nav li{
     font-family: m-plus-2p,sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 25px;
-    line-height: 2.08;
+    font-size: 20px;
+    line-height: 2.5;
 }
+.pc_nav li a{
+	position: relative;    /*テキストの基点*/
+	overflow: hidden;    /*はみ出る要素を隠す*/
+    padding: 3px;
+    transition: all .2s;
+}
+.pc_nav li span{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transition: all .3s;    /*アニメーションの指定*/
+	transform: translate(-50%, 0);/*X方向に-50% ※中央寄せにするため*/
+	display: block;   /*テキスト折り返しなし*/
+	white-space: nowrap;
+}
+/*差し替わるテキストの設定*/
+.pc_nav li span:nth-child(2){
+	opacity:0;
+}
+/*hoverするとテキストが入れ替わる設定*/
+.pc_nav li:hover span:nth-child(1){
+	opacity:0;
+}
+.pc_nav li:hover span:nth-child(2){
+	opacity:1;
+}
+
 /*スマホ用メニューをPCでは消す*/
 .sp_nav {
     display: none;
@@ -309,7 +337,7 @@ html.loading-delay {
     .aboutme_topPC,.profile_pc{
         display: none;
     }
-    .aboutme_topSP,.profile_sp{
+    .aboutme_topSP{
         display: block;
         margin: 0 auto;
         width: 65%;
@@ -319,7 +347,7 @@ html.loading-delay {
         width: 100%;
         display: block;
         margin: 0 auto;
-        padding: 65px 15px 0 15px;
+        padding-top: 65px;;
     }
     .name_text{
         width: 70%;
@@ -352,6 +380,8 @@ html.loading-delay {
     .profile_item{
         width: 17%;
         padding-right: 10%;
+        display: block;
+        margin-left: auto;
     }
     .skill_item{
         width: 20%;
@@ -422,6 +452,7 @@ html.loading-delay {
         font-size: 30px;
         border-bottom: none;
         padding-bottom: 17px;
+        margin: 180px 0 0 ;
     }
     .item_lead{
         font-size: 100%;

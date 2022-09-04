@@ -44,8 +44,9 @@
     <!--=====link=====-->
 
     <!--=====css=====-->
-    <link rel="stylesheet" href="css/lotion.css">
+    <link rel="stylesheet" href="workdetail.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
@@ -63,9 +64,10 @@
         <span class="global-navigation">
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="../index.html">to TOP</a></li>
-                    <li><a href="../about me/index.html">About me</a></li>
-                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="../index.html"><span>to TOP</span><span>トップ</span></a></li>
+                    <li><a href="../abaout me/index.html"><span>About me</span><span>自己紹介</span></a></li>
+                    <li><a href="../abaout me/index.html#service"><span>Service</span><span>サービス</span></a></li>
+                    <li><a href="../contact/index.html"><span>Contact</span><span>お問合せ</span></a></li>
                 </ul>
             </nav>
         </span>
@@ -74,18 +76,15 @@
         <nav class="sp_nav">
             <ul>
                 <li><a href="../index.html">to TOP</a></li>
-                <li><a href="../about me/index.html">About me</a></li>
+                <li><a href="../abaout me/index.html">About me</a></li>
                 <li><a href="../contact/index.html">Contact</a></li>
             </ul>
         </nav>
 
-
         <!--=====ヘッダー=====-->
-
         <header id="workdetail">
             <h2 class="title">Work</h2>
         </header>
-
 
         <!--=====実績内容=====-->
         <section class="main">
@@ -94,31 +93,52 @@
                     <div class="before">
                         <div class="before2">
                             <div class="thumbnail_img">
-                                <img src="img/lotionbanner.png" alt="化粧水広告">
+                                <img src="img/corporate@2x.png" alt="コーポレイトサイト">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="desc">
-                    <h3>概要</h3>
-                    <dl>
-                        <dt>カテゴリ</dt>
-                        <dd>バナー制作</dd>
-                        <dt>担当範囲</dt>
-                        <dd>デザイン</dd>
-                        <dt>使用ツール</dt>
-                        <dd>Illustrator</dd>
-                        <dt>制作時間</dt>
-                        <dd>一週間</dd>
-
-                    </dl>
+                <!--=====アコーディオン=====-->
+                <div class="accordion">
+                    <div class="accordion_wrap">
+                        <div class="accordion_switch" id="PCswitch">
+                            <p>PCサイト キャプション open/close</p>
+                        </div>
+                        <div class="accordion_contents">
+                            <img src="img/W1366_PC.jpg" alt="top">
+                            <a href="#PCswitch" class="goup"><span>ボタンに戻る</span></a>
+                        </div>
+                    </div>
+                    <div class="accordion_wrap">
+                        <div class="accordion_switch" id="SPswitch">
+                            <p>スマホサイト キャプション open/close</p>
+                        </div>
+                        <div class="accordion_contents">
+                            <img src="img/W375_スマホ.jpg" alt="top">
+                            <a href="#SPswitch" class="goup">ボタンに戻る</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="capture">
-                    <h3>ポイント</h3>
-                    <p>グラデーションや色使いから化粧水の存在がより目立つようデザインしました。詳しい説明ページへ誘導を目的とし、一目で化粧水の推しポイントがわかりやすいよう文字を配置。
-                        全体的に上品な印象な仕上がりになるよう表現しました。</p>
-                    <a href="../index.html"><img src="img/アセット 41@2x.png" alt="back"></a>
-                </div>
+            </div>
+            <div class="desc">
+                <h3>概要</h3>
+                <dl>
+                    <dt>カテゴリ</dt>
+                    <dd>サイト制作</dd>
+                    <dt>担当範囲</dt>
+                    <dd>デザイン</dd>
+                    <dt>使用ツール</dt>
+                    <dd>Illustrator / Photoshop</dd>
+                    <dt>制作時間</dt>
+                    <dd>一週間</dd>
+                </dl>
+            </div>
+            <div class="capture">
+                <h3>ポイント</h3>
+                <p>安心感があり落ち着いブルーを基調にし、女性の写真を使うことにより柔らかを出しました。強調して伝えたい文字は色を変え、
+                    ボタンなどを赤にすることにより目立たせクリックしやすいようにしました。
+                </p>
+                <a href="../index.html#work"><img src="img/アセット 41@2x.png" alt="back"></a>
             </div>
         </section>
 
@@ -167,7 +187,7 @@
         function fadeAnime() {
             //ふわっと動くきっかけのクラス名と動きのクラス名の設定
             $('.fadeUpTrigger').each(function () { //fadeInUpTriggerというクラス名が
-                var elemPos = $(this).offset().top + 200; //要素より、50px上の
+                var elemPos = $(this).offset().top - 50; //要素より、50px上の
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
                 if (scroll >= elemPos - windowHeight) {
@@ -186,11 +206,17 @@
         $(window).scroll(function () {
             fadeAnime();/* アニメーション用の関数を呼ぶ*/
         });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+
+
+        //アコーディオンメニュー
+        $('.accordion_switch').on('click', function () {
+            $(this).toggleClass('open');
+            $(this).next('.accordion_contents').slideToggle();
+        });
+
+
+
     </script>
-
-
-
-
-
 
 </body>

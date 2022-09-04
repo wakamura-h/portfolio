@@ -120,10 +120,9 @@ html.loading-delay {
 .pc_nav li a{
 	position: relative;    /*テキストの基点*/
 	overflow: hidden;    /*はみ出る要素を隠す*/
-	padding: 5px 60px;
+	padding: 3px;
     transition: all .2s;
 }
-
 .pc_nav li span{
 	position: absolute;
 	left: 50%;
@@ -206,7 +205,7 @@ html.loading-delay {
     transform: rotate(135deg);
 }
 .sp_nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -463,17 +462,17 @@ margin-top: 60px;
 
 /*制作実績　ランダムな動き*/
 .delay-time02{
-    animation-delay: 0.2s;/* アニメーションスタートの遅延時間を決めるCSS*/
+    animation-delay: 0.5s;/* アニメーションスタートの遅延時間を決めるCSS*/
 }
 .delay-time03{
-    animation-delay: 0.3s;
+    animation-delay: 0.7s;
 }
 .box{
     opacity: 0;  /*スタート時は要素自体を透過*/
 }
 .fadeUp {
     animation-name:fadeUpAnime;  /*ふわりとさせる*/
-    animation-duration:0.5s;
+    animation-duration:0.7s;
     animation-fill-mode:forwards;
     opacity: 0;
 }
@@ -508,6 +507,11 @@ margin-top: 60px;
         font-size: 60px;
         margin: 0 auto;
         padding-top: 250px;
+    }
+    .work_text{
+        font-size: 13px;
+        text-align: center;
+        padding: 10px 0;
     }
     .slider_wrap{
         display: block;

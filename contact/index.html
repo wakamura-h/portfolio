@@ -63,10 +63,10 @@
         <span class="global-navigation">
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="../index.html">to TOP</a></li>
-                    <li><a href="../index.html#work">Work</a></li>
-                    <li><a href="../abaout me/index.html">About me</a></li>
-                    <li><a href="../abaout me/index.html#sarvice">Service</a></li>
+                    <li><a href="../index.html"><span>to TOP</span><span>トップ</span></a></li>
+                    <li><a href="../index.html#work"><span>Work</span><span>制作実績</span></a></li>
+                    <li><a href="../abaout me/index.html"><span>About me</span><span>自己紹介</span></a></li>
+                    <li><a href="#sarvice"><span>Service</span><span>サービス</span></a></li>
                 </ul>
             </nav>
         </span>
@@ -89,33 +89,38 @@
 
         <!--お問合せフォーム-->
         <section class="form">
-            <!--名前-->
-            <div class="form_item">
-                <p class="formitem_label"><span class="required">必須</span>お名前</p>
-                <input type="text" name="name">
-            </div>
+            <form action=”mailto:wakamura@aaaa.com” enctype=”text/plain” method=”POST”>
+                <!--action=””値に受け取りたいメールアドレスを入れる
+            enctype=”text/plain” 念のため文字化け防止
+            method=”POST”　送信する形式-->
+                <!--名前-->
+                <div class="form_item">
+                    <p class="formitem_label"><span class="required">必須</span>お名前</p>
+                    <input type="text" name="name">
+                </div>
 
-            <!--フリガナ-->
-            <div class="form_item">
-                <p class="formitem_label"><span class="required">必須</span>フリガナ</p>
-                <input type="text" name="kana">
-            </div>
+                <!--フリガナ-->
+                <div class="form_item">
+                    <p class="formitem_label"><span class="required">必須</span>フリガナ</p>
+                    <input type="text" name="kana">
+                </div>
 
-            <!--メールアドレス-->
-            <div class="form_item">
-                <p class="formitem_label"><span class="required">必須</span>メールアドレス</p>
-                <input type="email" name="mailaddress">
-            </div>
+                <!--メールアドレス-->
+                <div class="form_item">
+                    <p class="formitem_label"><span class="required">必須</span>メールアドレス</p>
+                    <input type="email" name="mailaddress">
+                </div>
 
-            <!--問い合わせ内容-->
-            <div class="form_item">
-                <p class="form_item_msg"><span class="required">必須</span>お問い合わせ内容</p>
-                <textarea class="form_txtarea" name="inquiry"></textarea>
-            </div>
+                <!--問い合わせ内容-->
+                <div class="form_item">
+                    <p class="form_item_msg"><span class="required">必須</span>お問い合わせ内容</p>
+                    <textarea class="form_txtarea" name="inquiry"></textarea>
+                </div>
 
-            <div class="form_btn">
-                <input type="image" name="form_btn_img" src="img/アセット 52@2x.png" alt="送信する" class="form_btn">
-            </div>
+                <div class="form_btn">
+                    <input type="image" name="form_btn_img" src="img/アセット 52@2x.png" alt="送信する" class="form_btn">
+                </div>
+            </form>
         </section>
 
         <footer>

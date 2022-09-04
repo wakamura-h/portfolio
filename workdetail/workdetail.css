@@ -55,10 +55,10 @@ body{
     background-color: #ffffff;
 }
 .bg{
-    background-image: url(../img/72@2x.png),url(../img/73@2x.png),url(../img/71@2x.png),url(../img/74@2x.png);
-    background-position:left top,center top 100px,right bottom 800px,left bottom 80px;
+    background-image: url(img/72@2x.png),url(img/73@2x.png),url(img/71@2x.png),url(img/74@2x.png);
+    background-position:left top,center top ,right bottom 200px,left 100px bottom 400px;
     background-repeat:no-repeat,no-repeat,no-repeat,no-repeat;
-    background-size: 43%,10%,35%,20%;
+    background-size: 43%,16%,35%,16%;
 }
 /*font読み込み遅延対策*/
 html {
@@ -71,7 +71,7 @@ html.loading-delay {
 
 @media screen and (max-width:767px){
 .bg{
-    background-image: url(../img/73@2x.png);
+    background-image: url(img/73@2x.png);
     background-position:left 190px top;
     background-size: 20%;
 
@@ -114,14 +114,7 @@ html.loading-delay {
 .side_box{
     writing-mode:vertical-rl;
 }
-/*グローバルナビ*/
-.pc_nav li{
-    font-family: m-plus-2p,sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 25px;
-    line-height: 2.08;
-}
+
 /*スマホ用メニューをPCでは消す*/
 .sp_nav {
     display: none;
@@ -167,16 +160,40 @@ html.loading-delay {
 }
 
 /*グローバルナビ*/
-.pc_nav{
-    margin-right: 65px;
-}
 .pc_nav li{
     font-family: m-plus-2p,sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 25px;
-    line-height: 2.08;
+    font-size: 20px;
+    line-height: 2.5;
 }
+.pc_nav li a{
+	position: relative;    /*テキストの基点*/
+	overflow: hidden;    /*はみ出る要素を隠す*/
+	padding: 5px 60px;
+    transition: all .2s;
+}
+.pc_nav li span{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transition: all .3s;    /*アニメーションの指定*/
+	transform: translate(-50%, 0);/*X方向に-50% ※中央寄せにするため*/
+	display: block;   /*テキスト折り返しなし*/
+	white-space: nowrap;
+}
+/*差し替わるテキストの設定*/
+.pc_nav li span:nth-child(2){
+	opacity:0;
+}
+/*hoverするとテキストが入れ替わる設定*/
+.pc_nav li:hover span:nth-child(1){
+	opacity:0;
+}
+.pc_nav li:hover span:nth-child(2){
+	opacity:1;
+}
+
 /*スマホ用メニューをPCでは消す*/
 .sp_nav {
     display: none;
@@ -236,7 +253,7 @@ html.loading-delay {
         transform: rotate(135deg);
     }
     .sp_nav {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -274,8 +291,7 @@ html.loading-delay {
     font-weight: 300;
     font-style: normal;
     font-size: 90px;
-    padding-left:  740px;
-    margin:300px 0 300px;
+    padding: 300px 0 0 740px;
 
 }
 .title_sp{
@@ -298,7 +314,7 @@ html.loading-delay {
 /*/////制作実績内容/////*/
 .main_wrap{
     display: block;
-    margin: 0 auto;
+    margin: 200px auto 0;
     padding: 30px 180px;
 }
 .thumbnail{
@@ -314,12 +330,12 @@ html.loading-delay {
 
 @media screen and (max-width:767px){
     .main_wrap{
-        width: 100%;
-        padding: 0 ;
+        padding: 0 15px;
+        margin-top: 100px;
     }
     .thumbnail{
         width: 75%;
-        margin: 150px auto 80px;
+        margin: 0 auto
     }
 }
 
@@ -348,8 +364,6 @@ to {
 .fadeUpTrigger{
     opacity: 0;
 }
-
-
 /*枠線が伸びて出現*/
 .thumbnail{
     position: relative; /* 枠線が書かれる基点*/
@@ -414,6 +428,105 @@ to {
 @keyframes lineInnerAnime{
     0% {opacity:0;}
     100% {opacity:1;}
+}
+
+/*作品全体表示のアコーディオン*/
+.accordion{
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.accordion_wrap{
+    margin-top: 30px;
+}
+.accordion_switch {
+    position: relative;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid gray;
+    width: 30%;
+    margin: 18px auto;
+}
+.accordion_switch p{
+    text-align: center;
+}
+.accordion_switch.open {
+    border-bottom: 1px solid gray;
+}
+.accordion_switch:hover {
+    background-color: #eee;
+}
+.accordion_switch::after {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 11px;
+    background: url(../img/arrow_down.svg) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    transition: transform .2s;
+}
+.accordion_switch.open::after {
+    transform: rotateZ(180deg);
+    top: 46%;
+}
+.accordion_contents {
+    display: none;
+    padding: 5px 10px;
+}
+.accordion_contents img{
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+}
+/*///アコーディオンスイッチに戻るボタン///*/
+.goup{
+    display: block;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    background: #FFF;
+    border: 1px solid #999;
+    padding-top: 30px;
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 85%;
+    text-decoration: none;
+    color: #333;
+    opacity: 0.5;
+    position: relative;
+    margin: 15px auto;
+}
+.goup::before{
+    content: "";
+    display: block;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    width: 25%;
+    height: 25%;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+.goup:hover{
+    opacity: 1;
+}
+
+@media screen and (max-width:767px){
+    .accordion{
+        padding-top: 20px;
+    }
+    .accordion_switch {
+        width: 50%;
+        margin: 0 auto;
+    }
 }
 
 
@@ -492,6 +605,9 @@ dd{
         width: 43%;
         margin: 50px 0 0 0;
     }
+    .desc{
+        margin-top: 45px;
+    }
 }
 
 
@@ -539,7 +655,7 @@ dd{
 .footer_text{
     font-size: 10px;
     text-align: center;
-    margin:100px 0 100px 0;
+    margin:100px auto;
 }
 
 @media screen and (max-width:767px){
@@ -554,7 +670,7 @@ dd{
         width: 50%;
     }
     .footer_text{
-        padding: 50px 0 30px 0;
+        margin: 50px auto;
     }
 }
 
