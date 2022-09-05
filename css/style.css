@@ -826,6 +826,7 @@ textarea:focus {
     font-size: 10px;
     text-align: center;
     transition: all 0.3s ease-in;
+    margin-top: 23px;
 }
 .footer_pc_img{
     width: 333px;
