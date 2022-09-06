@@ -127,7 +127,6 @@ html.loading-delay {
 	position: absolute;
 	left: 50%;
 	top:50%;
-	transition: all .5s;    /*アニメーションの指定*/
 	transform: translate(-50%, 0);/*X方向に-50% ※中央寄せにするため*/
 	display: block;   /*テキスト折り返しなし*/
 	white-space: nowrap;
@@ -465,14 +464,14 @@ margin-top: 60px;
     animation-delay: 0.5s;/* アニメーションスタートの遅延時間を決めるCSS*/
 }
 .delay-time03{
-    animation-delay: 0.7s;
+    animation-delay: 0.5s;
 }
 .box{
     opacity: 0;  /*スタート時は要素自体を透過*/
 }
 .fadeUp {
     animation-name:fadeUpAnime;  /*ふわりとさせる*/
-    animation-duration:0.7s;
+    animation-duration:0.3s;
     animation-fill-mode:forwards;
     opacity: 0;
 }
@@ -610,7 +609,7 @@ margin-top: 60px;
         line-height: 2.7;
         width: 83%;
         margin: 0 auto;
-        padding: 35% 0 30% 0;
+        padding: 35% 0 10% 0;
 
     }
     .text_bg{
@@ -626,11 +625,6 @@ margin-top: 60px;
         display: block;
         margin: 0 auto;
         padding:30px 0 30px 0;
-        filter: grayscale(100%);
-        transition: all 0.3s ease-in;
-    }
-    .toabout img:hover{
-        filter: grayscale(0%);
     }
     .toabout_btmimg{
         width: 55%;
@@ -669,6 +663,7 @@ margin-top: 60px;
 .text2{
     font-size: 15px;
     margin-top: 65px;
+    line-height: 1.8;
 }
 .contact_sp_wrap{
     display: none;/*sp隠す*/
@@ -696,14 +691,20 @@ margin-top: 60px;
     margin: 0 auto;
     padding-top: 50px;
 }
+.contact_text2{
+    font-size: 12px;
+    line-height: 2.1;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
 /*//問い合わせフォーム//*/
 .form {
     width: 100%;
     display: block;
     margin: 0 auto;
     padding: 50px 10px 0 10px;
-    position: relative;
-    z-index: 100;
 }
 .form_item{
     border-top: 1px solid transparent;
@@ -812,11 +813,6 @@ textarea:focus {
     display: block;
     width: 300px;
     padding-top: 60px;
-    filter: grayscale(100%);
-    transition: all 0.3s ease-in;
-}
-.form_btn:hover{
-    filter: grayscale(0%);
 }
 }
 

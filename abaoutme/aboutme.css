@@ -131,7 +131,6 @@ html.loading-delay {
 	position: absolute;
 	left: 50%;
 	top:50%;
-	transition: all .3s;    /*アニメーションの指定*/
 	transform: translate(-50%, 0);/*X方向に-50% ※中央寄せにするため*/
 	display: block;   /*テキスト折り返しなし*/
 	white-space: nowrap;
@@ -207,7 +206,7 @@ html.loading-delay {
         transform: rotate(135deg);
     }
     .sp_nav {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -511,6 +510,12 @@ html.loading-delay {
         font-size: 16px;
         line-height: 1.8;
         margin-top: 70px;
+    }
+    .contact img{
+        filter: none
+    }
+    .contact img:hover{
+        filter: none
     }
 }
 /*/////footer/////*/

@@ -177,7 +177,6 @@ html.loading-delay {
 	position: absolute;
 	left: 50%;
 	top:50%;
-	transition: all .3s;    /*アニメーションの指定*/
 	transform: translate(-50%, 0);/*X方向に-50% ※中央寄せにするため*/
 	display: block;   /*テキスト折り返しなし*/
 	white-space: nowrap;
@@ -344,7 +343,7 @@ html.loading-delay {
 /* fadeUp */
 .fadeUp{
     animation-name:fadeUpAnime;;
-    animation-duration:0.5s;
+    animation-duration:0.3s;
     animation-fill-mode:forwards;
     opacity:0;
 }
@@ -360,6 +359,8 @@ to {
     transform: translateY(0);
 }
 }
+
+
 /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
 .fadeUpTrigger{
     opacity: 0;
@@ -602,11 +603,20 @@ dd{
         margin-top: 50px;
     }
     .capture img{
+        display: block;
         width: 43%;
-        margin: 50px 0 0 0;
+        margin: 50px auto;
+        filter: none;
+        transition: none;
     }
     .desc{
         margin-top: 45px;
+    }
+    dt{
+        width: 35%;
+    }
+    dd{
+        width: 65%;
     }
 }
 
