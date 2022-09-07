@@ -42,11 +42,10 @@
 
 
     <!--=====link=====-->
-
     <link rel="stylesheet" href="workdetail.css">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--プラグイン読み込み-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 
@@ -59,16 +58,17 @@
             <h2>web design / cording</h2>
             <h3>Hikari Wakamura Portforio</h3>
         </div>
-        <span class="global-navigation">
+        <div class="global-navigation">
             <nav class="pc_nav">
                 <ul>
                     <li><a href="../index.html"><span>to TOP</span><span>トップ</span></a></li>
+                    <li><a href="../index.html#work"><span>Work</span><span>制作実績</span></a></li>
                     <li><a href="../abaoutme/index.html"><span>About me</span><span>自己紹介</span></a></li>
                     <li><a href="../abaoutme/index.html#service"><span>Service</span><span>サービス</span></a></li>
                     <li><a href="../contact/index.html"><span>Contact</span><span>お問合せ</span></a></li>
                 </ul>
             </nav>
-        </span>
+        </div>
         <!--=============sp=============-->
         <div class="sp_btn"><span></span></div>
         <nav class="sp_nav">
@@ -87,6 +87,7 @@
         <!--=====実績内容=====-->
         <section class="main">
             <div class="main_wrap">
+                <!--=============PC=============-->
                 <div class="fadeUpTrigger">
                     <div class="before">
                         <div class="before2">
@@ -96,6 +97,12 @@
                         </div>
                     </div>
                 </div>
+                <!--=============sp=============-->
+                <div class="worksp">
+                    <img src="img/camp.png" alt="camp banner">
+                </div>
+
+
                 <div class="desc">
                     <h3>概要</h3>
                     <dl>
@@ -156,23 +163,29 @@
         });
 
 
+
         // 動きのきっかけとなるアニメーションの名前を定義
         function fadeAnime() {
             //ふわっと動くきっかけのクラス名と動きのクラス名の設定
             $('.fadeUpTrigger').each(function () { //fadeInUpTriggerというクラス名が
-                var elemPos = $(before).offset().top + 200; //要素より
+                var elemPos = $(this).offset().top + 200; //要素より
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
                 if (scroll >= elemPos - windowHeight) {
+                    $(this).addClass('fadeUp');
                     $('.before').addClass('thumbnail');
                     $('.before2').addClass('thumbnail2');
                     // 画面内に入ったらfadeInというクラス名を追記
                 }
             });
         }
+        $(window).scroll(function () {
+            fadeAnime();
+        });// 画面をスクロールをしたら動かしたい場合の記述
+
+
 
     </script>
-
 
 
 

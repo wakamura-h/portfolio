@@ -47,8 +47,7 @@
     <link rel="stylesheet" href="workdetail.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 </head>
 
 
@@ -61,16 +60,17 @@
             <h2>web design / cording</h2>
             <h3>Hikari Wakamura Portforio</h3>
         </div>
-        <span class="global-navigation">
+        <div class="global-navigation">
             <nav class="pc_nav">
                 <ul>
                     <li><a href="../index.html"><span>to TOP</span><span>トップ</span></a></li>
+                    <li><a href="../index.html#work"><span>Work</span><span>制作実績</span></a></li>
                     <li><a href="../abaoutme/index.html"><span>About me</span><span>自己紹介</span></a></li>
                     <li><a href="../abaoutme/index.html#service"><span>Service</span><span>サービス</span></a></li>
                     <li><a href="../contact/index.html"><span>Contact</span><span>お問合せ</span></a></li>
                 </ul>
             </nav>
-        </span>
+        </div>
         <!--=============sp=============-->
         <div class="sp_btn"><span></span></div>
         <nav class="sp_nav">
@@ -89,6 +89,7 @@
         <!--=====実績内容=====-->
         <section class="main">
             <div class="main_wrap">
+                <!--=============PC=============-->
                 <div class="fadeUpTrigger">
                     <div class="before">
                         <div class="before2">
@@ -98,34 +99,38 @@
                         </div>
                     </div>
                 </div>
-                <!--=====アコーディオン=====-->
-                <div class="accordion">
-                    <div class="accordion_wrap">
-                        <div class="accordion_switch" id="PCswitch">
-                            <p>PCサイト キャプション open/close</p>
-                        </div>
-                        <div class="accordion_contents">
-                            <ul>
-                                <li><img src="img/top.png" alt="top"></li>
-                                <li><img src="img/me.png" alt="aboutme"></li>
-                                <li><img src="img/contact.png" alt="contact"></li>
-                                <li><img src="img/work.png" alt="work"></li>
-                            </ul>
-                            <a href="#PCswitch" class="goup"><span>ボタンに戻る</span></a>
-                        </div>
+            </div>
+            <!--=============sp=============-->
+            <div class="worksp">
+                <img src="img/portfolip@2x.png" alt="camp banner">
+            </div>
+            <!--=====アコーディオン=====-->
+            <div class="accordion">
+                <div class="accordion_wrap">
+                    <div class="accordion_switch" id="PCswitch">
+                        <p>PCサイト キャプション open/close</p>
                     </div>
-                    <div class="accordion_wrap">
-                        <div class="accordion_switch" id="SPswitch">
-                            <p>スマホサイト キャプション open/close</p>
-                        </div>
-                        <div class="accordion_contents">
-                            <ul>
-                                <li><img src="img/sp_top.png" alt="top"></li>
-                                <li><img src="img/sp_me.png" alt="aboutme"></li>
-                                <li><img src="img/sp_work.png" alt="work"></li>
-                            </ul>
-                            <a href="#SPswitch" class="goup">ボタンに戻る</a>
-                        </div>
+                    <div class="accordion_contents">
+                        <ul>
+                            <li><img src="img/top.png" alt="top"></li>
+                            <li><img src="img/me.png" alt="aboutme"></li>
+                            <li><img src="img/contact.png" alt="contact"></li>
+                            <li><img src="img/work.png" alt="work"></li>
+                        </ul>
+                        <a href="#PCswitch" class="goup"><span>ボタンに戻る</span></a>
+                    </div>
+                </div>
+                <div class="accordion_wrap">
+                    <div class="accordion_switch" id="SPswitch">
+                        <p>スマホサイト キャプション open/close</p>
+                    </div>
+                    <div class="accordion_contents">
+                        <ul>
+                            <li><img src="img/sp_top.png" alt="top"></li>
+                            <li><img src="img/sp_me.png" alt="aboutme"></li>
+                            <li><img src="img/sp_work.png" alt="work"></li>
+                        </ul>
+                        <a href="#SPswitch" class="goup">ボタンに戻る</a>
                     </div>
                 </div>
             </div>
@@ -172,10 +177,6 @@
     </div>
 
 
-
-    </section>
-
-
     <script>
         // フォント読み込みエラー対策
         setTimeout(function () {
@@ -205,11 +206,6 @@
                     $('.before').addClass('thumbnail');
                     $('.before2').addClass('thumbnail2');
                     // 画面内に入ったらfadeInというクラス名を追記
-                } else {
-                    $(this).removeClass('fadeUp');
-                    $('.before').removeClass('thumbnail');
-                    $('.before2').removeClass('thumbnail2');
-                    // 画面外に出たらfadeInというクラス名を外す
                 }
             });
         }

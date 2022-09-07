@@ -54,8 +54,7 @@
     <!--title文字アニメーション-->
     <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-11/js/8-11.js"></script>
     <!--slick-->
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 
 </head>
@@ -71,7 +70,7 @@
             <h2>web design / cording</h2>
             <h3>Hikari Wakamura Portforio</h3>
         </div>
-        <span class="global-navigation">
+        <div class="global-navigation">
             <nav class="pc_nav">
                 <ul>
                     <li><a href="index.html"><span>to TOP</span><span>トップ</span></a></li>
@@ -81,9 +80,10 @@
                     <li><a href="contact/index.html"><span>Contact</span><span>お問合せ</span></a></li>
                 </ul>
             </nav>
-        </span>
+        </div>
         <!--=============sp=============-->
-        <div class="sp_btn"><span></span></div>
+        <div class="sp_btn"><span></span>
+        </div>
         <nav class="sp_nav">
             <ul>
                 <li><a href="#TOP">to TOP</a></li>
@@ -122,38 +122,38 @@
             <!--=============PC=============-->
             <div class="work_wraps">
                 <!--一列目-->
-                <div class="work_list">
-                    <div class="unit1 fadeUpTrigger box">
+                <ul class="work_list">
+                    <li class="unit1 fadeUpTrigger box">
                         <a href="workdetail/banner_lotion.html"><img src="img/40@2x.png" alt="バナー化粧水"></a>
-                    </div>
-                    <div class="unit1_center delay-time03 box fadeUpTrigger">
+                    </li>
+                    <li class="unit1_center delay-time03 box fadeUpTrigger">
                         <a href="workdetail/lp_portfolio.html"><img src="img/77@2x.png" alt="portfolio"></a>
-                    </div>
-                    <div class="unit1 delay-time02 fadeUpTrigger box">
+                    </li>
+                    <li class="unit1 delay-time02 fadeUpTrigger box">
                         <a href="workdetail/banner_salad.html"><img src="img/57@2x.png" alt="バナー"></a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
                 <!--二列目-->
-                <div class="work_list">
-                    <div class="unit2_left fadeUpTrigger box">
+                <ul class="work_list">
+                    <li class="unit2_left fadeUpTrigger box">
                         <a href="workdetail/lp_hairsalon.html"><img src="img/58@2x.png" alt="コーポレイトサイト"></a>
-                    </div>
-                    <div class="unit2_right delay-time02 fadeUpTrigger box">
+                    </li>
+                    <li class="unit2_right delay-time02 fadeUpTrigger box">
                         <a href="workdetail/illust.html"><img src="img/36@2x.png" alt="イラスト"></a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
                 <!--三列目-->
-                <div class="work_list">
-                    <div class="unit3 delay-time02 fadeUpTrigger box">
+                <ul class="work_list">
+                    <li class="unit3 delay-time02 fadeUpTrigger box">
                         <a href="workdetail/lp_caffe.html"><img src="img/85@2x.png" alt="caffeサイト"></a>
-                    </div>
-                    <div class="unit3_center fadeUpTrigger box">
+                    </li>
+                    <li class="unit3_center fadeUpTrigger box">
                         <a href="workdetail/lp_corporate.html"><img src="img/33@2x.png" alt="コーポレイトサイト"></a>
-                    </div>
-                    <div class="unit3_right delay-time03 box fadeUpTrigger">
+                    </li>
+                    <li class="unit3_right delay-time03 box fadeUpTrigger">
                         <a href="workdetail/banner_camp.html"><img src="img/37@2x.png" alt="バナー"></a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
             <!--=============SP=============-->
             <div class="work_sp">
@@ -177,7 +177,7 @@
 
                     <div class="slider-nav">
                         <div><img class="slick_img" src="img/33@2x.png" alt="corporateLP"></div>
-                        <div><img class="slick_img" src="img/58@2x.png" alt="caffeLP"></div>
+                        <div><img class="slick_img" src="img/85@2x.png" alt="caffeLP"></div>
                         <div><img class="slick_img" src="img/36@2x.png" alt="illust"></div>
                         <div><img class="slick_img" src="img/37@2x.png" alt="camp banner"></div>
                         <div><img class="slick_img" src="img/40@2x.png" alt="lotion banner"></div>
@@ -186,7 +186,7 @@
                         <div><img class="slick_img" src="img/77@2x.png" alt="portfolio site"></div>
                     </div>
                 </div>
-                <div class="work_btmimg"><img src="img/17@2x.png"></div>
+                <div class="work_btmimg"><img src="img/17@2x.png" alt=""></div>
             </div>
         </section>
 
@@ -202,8 +202,8 @@
                     </p>
                 </div>
             </div>
-            <div class="toabout"><a href="abaoutme/index.html"><img src="img/16@2x.png"></a></div>
-            <div class="toabout_btmimg"><img src="img/15@2x.png"></div>
+            <div class="toabout"><a href="abaoutme/index.html"><img src="img/16@2x.png" alt=""></a></div>
+            <div class="toabout_btmimg"><img src="img/15@2x.png" alt=""></div>
         </section>
 
         <!--contact-->
@@ -249,6 +249,7 @@
                         <input type="image" name="form_btn_img" src="img/52@2x.png" alt="送信する" class="form_btn">
                     </div>
                 </div>
+            </div>
         </section>
 
         <!--footer-->
@@ -297,7 +298,7 @@
         $(window).on('load', function () {
 
 
-            //spanタグを追加する
+            //グローバルメニューの文字変更
             var element = $(".title");
             element.each(function () {
                 var text = $(this).text();
@@ -355,3 +356,5 @@
 
     </script>
 </body>
+
+</html>

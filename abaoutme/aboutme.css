@@ -84,6 +84,7 @@ html.loading-delay {
     top:20px;
     z-index: 500;
     left: 90%;
+    display: inline-block;
 }
 .side_box{
     display: block;
@@ -392,7 +393,7 @@ html.loading-delay {
 }
 
 /*/////service/////*/
-#sarvice{
+#service{
     display: block;
     max-width: 1000px;
     margin: 190px auto;

@@ -45,8 +45,8 @@
 
     <link rel="stylesheet" href="workdetail.css">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 </head>
 
 
@@ -59,16 +59,17 @@
             <h2>web design / cording</h2>
             <h3>Hikari Wakamura Portforio</h3>
         </div>
-        <span class="global-navigation">
+        <div class="global-navigation">
             <nav class="pc_nav">
                 <ul>
                     <li><a href="../index.html"><span>to TOP</span><span>トップ</span></a></li>
+                    <li><a href="../index.html#work"><span>Work</span><span>制作実績</span></a></li>
                     <li><a href="../abaoutme/index.html"><span>About me</span><span>自己紹介</span></a></li>
                     <li><a href="../abaoutme/index.html#service"><span>Service</span><span>サービス</span></a></li>
                     <li><a href="../contact/index.html"><span>Contact</span><span>お問合せ</span></a></li>
                 </ul>
             </nav>
-        </span>
+        </div>
         <!--=============sp=============-->
         <div class="sp_btn"><span></span></div>
         <nav class="sp_nav">
@@ -90,6 +91,7 @@
         <!--=====実績内容=====-->
         <section class="main">
             <div class="main_wrap">
+                <!--=============PC=============-->
                 <div class="fadeUpTrigger">
                     <div class="before">
                         <div class="before2">
@@ -99,27 +101,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="desc">
-                    <h3>概要</h3>
-                    <dl>
-                        <dt>カテゴリ</dt>
-                        <dd>イラスト</dd>
-                        <dt>担当範囲</dt>
-                        <dd>デザイン</dd>
-                        <dt>使用ツール</dt>
-                        <dd> Photoshop</dd>
-                        <dt>制作時間</dt>
-                        <dd>一週間</dd>
-
-                    </dl>
-                </div>
-                <div class="capture">
-                    <h3>ポイント</h3>
-                    <p>夏がテーマだったので使用した写真もカラフルで全体的に色が多くなるようにしました。
-                        写真自体も明るさを出して見た人が美味しそうに感じてもらえるように加工しました。</p>
-                    <a href="../index.html#work"><img src="img/41@2x.png" alt="back"></a>
-                </div>
             </div>
+            <!--=============sp=============-->
+            <div class="worksp">
+                <img src="img/salad.png" alt="camp banner">
+            </div>
+
+
+            <div class="desc">
+                <h3>概要</h3>
+                <dl>
+                    <dt>カテゴリ</dt>
+                    <dd>イラスト</dd>
+                    <dt>担当範囲</dt>
+                    <dd>デザイン</dd>
+                    <dt>使用ツール</dt>
+                    <dd> Photoshop</dd>
+                    <dt>制作時間</dt>
+                    <dd>一週間</dd>
+
+                </dl>
+            </div>
+            <div class="capture">
+                <h3>ポイント</h3>
+                <p>夏がテーマだったので使用した写真もカラフルで全体的に色が多くなるようにしました。
+                    写真自体も明るさを出して見た人が美味しそうに感じてもらえるように加工しました。</p>
+                <a href="../index.html#work"><img src="img/41@2x.png" alt="back"></a>
+            </div>
+
         </section>
 
         <!--=====contact=====-->
@@ -141,9 +150,6 @@
         </footer>
     </div>
 
-
-
-    </section>
 
 
     <script>
@@ -175,17 +181,12 @@
                     $('.before').addClass('thumbnail');
                     $('.before2').addClass('thumbnail2');
                     // 画面内に入ったらfadeInというクラス名を追記
-                } else {
-                    $(this).removeClass('fadeUp');
-                    $('.before').removeClass('thumbnail');
-                    $('.before2').removeClass('thumbnail2');
-                    // 画面外に出たらfadeInというクラス名を外す
                 }
             });
         }
         $(window).scroll(function () {
-            fadeAnime();/* アニメーション用の関数を呼ぶ*/
-        });// ここまで画面をスクロールをしたら動かしたい場合の記述
+            fadeAnime();
+        });// 画面をスクロールをしたら動かしたい場合の記述
     </script>
 
 

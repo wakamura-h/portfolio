@@ -81,6 +81,7 @@ html.loading-delay {
     top:20px;
     z-index: 500;
     left: 90%;
+    display: inline-block;
 }
 .side_box{
     display: block;
@@ -121,7 +122,7 @@ html.loading-delay {
 	position: relative;    /*テキストの基点*/
 	overflow: hidden;    /*はみ出る要素を隠す*/
 	padding: 3px;
-    transition: all .2s;
+    transition: all .3s;
 }
 .pc_nav li span{
 	position: absolute;
@@ -170,21 +171,33 @@ html.loading-delay {
     background: black;
     display: block;
     width: 33px;/*長さ*/
-    height: 1px;/*線の太さ*/
+    height: 2px;/*線の太さ*/
     position: relative;
     top: 10px;
     transition: 0.3s;
     }
-.sp_btn span::before,
-.sp_btn span::after {
+.sp_btn span::before{
     content: '';
     background: black;
     display: block;
     width: 33px;
-    height: 1px;
+    height: 2px;
     position: absolute;
     transition: 0.3s;   
     }
+
+.sp_btn span::after {
+    content: 'MENU';
+    background: black;
+    display: block;
+    width: 33px;
+    height: 2px;
+    position: absolute;
+    transition: 0.3s; 
+    font-size: 8px;
+    text-align: center;
+    }
+
 .sp_btn span::before{
     bottom: 12px;
 } 
@@ -202,6 +215,7 @@ html.loading-delay {
 .open span::after{
     top: 0px;
     transform: rotate(135deg);
+    content: '';
 }
 .sp_nav {
     position: fixed;
@@ -471,7 +485,7 @@ margin-top: 60px;
 }
 .fadeUp {
     animation-name:fadeUpAnime;  /*ふわりとさせる*/
-    animation-duration:0.3s;
+    animation-duration:0.5s;
     animation-fill-mode:forwards;
     opacity: 0;
 }
@@ -616,6 +630,7 @@ margin-top: 60px;
         background-image: url(../img/21@2x.png);
         background-position: center;
         background-size: 90%;
+        background-repeat: no-repeat;
     }
     .toabout{
         margin-top: 50px;
