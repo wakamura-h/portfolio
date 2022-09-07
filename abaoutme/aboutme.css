@@ -436,7 +436,7 @@ html.loading-delay {
 }
 
 @media screen and (max-width:767px){
-    #sarvice{
+    #service{
         width: 70%;
         margin: 0 auto;
 
@@ -513,6 +513,7 @@ html.loading-delay {
         margin-top: 70px;
     }
     .contact img{
+        width: 60%;
         filter: none
     }
     .contact img:hover{

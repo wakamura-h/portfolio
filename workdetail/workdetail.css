@@ -362,8 +362,6 @@ html.loading-delay {
         margin: 0 auto
     }
 }
-
-/*-----作品アニメーション-----*/
 /*ふわっと出る*/
 /* fadeUp */
 .fadeUp{
@@ -454,7 +452,7 @@ to {
 }
 
 
-@media screen and (max-width:767px){   /*/////sp/////*/
+@media screen and (max-width:1100px){   /*/////sp/////*/
     .fadeUpTrigger{
         display: none;
     }
@@ -627,7 +625,7 @@ dd{
     padding-top: 10px;
 }
 .capture img{
-    width: 28%;
+    width: 40%;
     margin:120px 0 0 50px ;
     filter: grayscale(100%);
     transition: all 0.3s ease-in;
@@ -646,7 +644,7 @@ dd{
     }
     .capture img{
         display: block;
-        width: 43%;
+        width: 80%;
         margin: 50px auto;
         filter: none;
         transition: none;
