@@ -374,17 +374,17 @@ html.loading-delay {
         text-align: center;
     }
     .name_item{
-        width: 20%;
+        width: 30%;
         padding-left: 10%;
     }
     .profile_item{
-        width: 17%;
+        width: 27%;
         padding-right: 10%;
         display: block;
         margin-left: auto;
     }
     .skill_item{
-        width: 20%;
+        width: 30%;
         padding-left: 10%;
     }
     
@@ -443,6 +443,7 @@ html.loading-delay {
     }
     .service_title{
         font-size: 60px;
+        margin: 180px 0 0 0 ;
     }
     .webitem,.codingitem{
         display: block;
@@ -452,7 +453,7 @@ html.loading-delay {
         font-size: 30px;
         border-bottom: none;
         padding-bottom: 17px;
-        margin: 180px 0 0 ;
+        margin-top: 80px;
     }
     .item_lead{
         font-size: 100%;
@@ -511,6 +512,13 @@ html.loading-delay {
         font-size: 16px;
         line-height: 1.8;
         margin-top: 70px;
+        padding: 0 20px;
+    }
+    .text2{
+        font-size: 13px;
+        line-height: 1.5;
+        margin-top: 50px;
+        padding: 0 20px;
     }
     .contact img{
         width: 60%;
