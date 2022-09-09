@@ -206,6 +206,7 @@ html.loading-delay {
     .pc_nav{
         display: none; /*ps消す*/
     }
+
     /*///ハンバーガーメニュー//*/
     .sp_btn{
         display: block;
@@ -214,6 +215,11 @@ html.loading-delay {
         top:  15px;
         height: 30px;
         z-index: 800;
+    }
+    .sp_menu{
+        font-size: 8px;
+        text-align: center;
+        padding-top: 26px;
     }
     .sp_btn span {
         background: black;
@@ -293,23 +299,15 @@ html.loading-delay {
     font-size: 90px;
     padding:300px 0 50px 720px;
 }
-.title_sp{
-    display: none;
-}
-@media screen and (max-width:767px){
-    .pc_nav{
-        display: none;
-    }
-
+@media screen and (max-width:1100px){
     .title{
-        font-size: 60px;
+        font-size: 90px;
         margin: 0 auto;
         text-align: center;
         margin-top: 100px;
         padding: 0;
     }
 }
-
 /*/////制作実績内容/////*/
 .main_wrap{
     display: block;
@@ -326,6 +324,7 @@ html.loading-delay {
 @media screen and (max-width:767px){
     .title{
         margin-top: 50px;
+        font-size: 60px;
     }
     .main_wrap{
         padding: 0 15px;
@@ -503,8 +502,6 @@ to {
     display: inline-block;
     width: 18px;
     height: 11px;
-    background: url(../img/arrow_down.svg) no-repeat center center;
-    background-size: contain;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -524,41 +521,7 @@ to {
     margin: 0 auto;
     width: 40%;
 }
-/*///アコーディオンスイッチに戻るボタン///*/
-.goup{
-    display: block;
-    width: 60px;
-    height: 60px;
-    box-sizing: border-box;
-    background: #FFF;
-    border: 1px solid #999;
-    padding-top: 30px;
-    text-align: center;
-    letter-spacing: -1px;
-    font-size: 85%;
-    text-decoration: none;
-    color: #333;
-    opacity: 0.5;
-    position: relative;
-    margin: 15px auto;
-}
-.goup::before{
-    content: "";
-    display: block;
-    border-top: 2px solid #333;
-    border-right: 2px solid #333;
-    width: 25%;
-    height: 25%;
-    top: 25%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    position: absolute;
-    transform: rotate(-45deg);
-}
-.goup:hover{
-    opacity: 1;
-}
+
 
 @media screen and (max-width:767px){
     .accordion{
@@ -626,7 +589,7 @@ dd{
 }
 .capture img{
     width: 40%;
-    margin:120px 0 0 50px ;
+    margin-top:120px;
     filter: grayscale(100%);
     transition: all 0.3s ease-in;
 }
@@ -634,6 +597,11 @@ dd{
     filter: grayscale(0%);
 }
 
+@media screen and (max-width:1100px){
+    .desc ,.capture{
+        width: 70%;
+    }
+}
 @media screen and (max-width:767px){
     .desc ,.capture{
         width: 80%;

@@ -72,7 +72,9 @@
             </nav>
         </div>
         <!--=============sp=============-->
-        <div class="sp_btn"><span></span></div>
+        <div class="sp_btn"><span></span>
+            <p class="sp_menu">MENU</p>
+        </div>
         <nav class="sp_nav">
             <ul>
                 <li><a href="../index.html">to TOP</a></li>
@@ -107,9 +109,6 @@
             <!--=====アコーディオン=====-->
             <div class="accordion">
                 <div class="accordion_wrap">
-                    <div class="accordion_switch" id="PCswitch">
-                        <p>PCサイト キャプション open/close</p>
-                    </div>
                     <div class="accordion_contents">
                         <ul>
                             <li><img src="img/top.png" alt="top"></li>
@@ -117,20 +116,21 @@
                             <li><img src="img/contact.png" alt="contact"></li>
                             <li><img src="img/work.png" alt="work"></li>
                         </ul>
-                        <a href="#PCswitch" class="goup"><span>ボタンに戻る</span></a>
+                    </div>
+                    <div class="accordion_switch" id="PCswitch">
+                        <p>PCサイト キャプション open/close</p>
                     </div>
                 </div>
                 <div class="accordion_wrap">
-                    <div class="accordion_switch" id="SPswitch">
-                        <p>スマホサイト キャプション open/close</p>
-                    </div>
                     <div class="accordion_contents">
                         <ul>
                             <li><img src="img/sp_top.png" alt="top"></li>
                             <li><img src="img/sp_me.png" alt="aboutme"></li>
                             <li><img src="img/sp_work.png" alt="work"></li>
                         </ul>
-                        <a href="#SPswitch" class="goup">ボタンに戻る</a>
+                    </div>
+                    <div class="accordion_switch" id="SPswitch">
+                        <p>スマホサイト キャプション open/close</p>
                     </div>
                 </div>
             </div>
@@ -190,6 +190,7 @@
             $('.sp_btn,.sp_nav li').click(function () {
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
+                $('.sp_menu').fadeToggle();
             });
         });
 
@@ -218,7 +219,7 @@
         //アコーディオンメニュー
         $('.accordion_switch').on('click', function () {
             $(this).toggleClass('open');
-            $(this).next('.accordion_contents').slideToggle();
+            $(this).prev('.accordion_contents').slideToggle();
         });
 
 

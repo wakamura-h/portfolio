@@ -169,6 +169,11 @@ html.loading-delay {
         height: 30px;
         z-index: 800;
     }
+    .sp_menu{
+        font-size: 8px;
+        text-align: center;
+        padding-top: 26px;
+    }
     .sp_btn span {
         background: black;
         display: block;

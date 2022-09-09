@@ -71,7 +71,9 @@
             </nav>
         </div>
         <!--=============sp=============-->
-        <div class="sp_btn"><span></span></div>
+        <div class="sp_btn"><span></span>
+            <p class="sp_menu">MENU</p>
+        </div>
         <nav class="sp_nav">
             <ul>
                 <li><a href="../index.html">to TOP</a></li>
@@ -165,6 +167,7 @@
             $('.sp_btn,.sp_nav li').click(function () {
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
+                $('.sp_menu').fadeToggle();
             });
         });
 
