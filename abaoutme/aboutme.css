@@ -178,7 +178,7 @@ html.loading-delay {
         background: black;
         display: block;
         width: 33px;/*長さ*/
-        height: 1px;/*線の太さ*/
+        height: 2px;/*線の太さ*/
         position: relative;
         top: 10px;
         transition: 0.3s;
@@ -189,7 +189,7 @@ html.loading-delay {
         background: black;
         display: block;
         width: 33px;
-        height: 1px;
+        height: 2px;
         position: absolute;
         transition: 0.3s;   
         }
