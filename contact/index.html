@@ -89,38 +89,46 @@
 
         <!--お問合せフォーム-->
         <section class="form">
-            <form action=”#” enctype=”text/plain” method=”post”>
+            <form
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdrtU0oa5axvW95DEI0SSQarEIBlRdXaCMrNUaCRbLZ9x1tuA/formResponse"
+                enctype=”text/plain” method=”post” target="hidden_iframe" onsubmit="submitted=true;">
                 <!--action=””値に受け取りたいメールアドレスを入れる
             enctype=”text/plain” 念のため文字化け防止
             method=”POST”　送信する形式-->
                 <!--名前-->
                 <div class="form_item">
-                    <p class="formitem_label"><span class="required">必須</span>お名前</p>
-                    <input type="text" name="name">
+                    <p class="formitem_label">お名前<span class="required">必須</span></p>
+                    <input type="text" name="entry.383635560">
                 </div>
 
                 <!--フリガナ-->
                 <div class="form_item">
-                    <p class="formitem_label"><span class="required">必須</span>フリガナ</p>
-                    <input type="text" name="kana">
+                    <p class="formitem_label">フリガナ</p>
+                    <input type="text" name="entry.1786985062">
                 </div>
 
                 <!--メールアドレス-->
                 <div class="form_item">
-                    <p class="formitem_label"><span class="required">必須</span>メールアドレス</p>
-                    <input type="email" name="mailaddress">
+                    <p class="formitem_label">メールアドレス<span class="required">必須</span></p>
+                    <input type="email" name="entry.493379004">
                 </div>
 
                 <!--問い合わせ内容-->
                 <div class="form_item">
-                    <p class="form_item_msg"><span class="required">必須</span>お問い合わせ内容</p>
-                    <textarea class="form_txtarea" name="inquiry"></textarea>
+                    <p class="form_item_msg">お問い合わせ内容<span class="required">必須</span></p>
+                    <textarea class="form_txtarea" name="entry.1421027424"></textarea>
                 </div>
 
                 <div class="form_btn">
                     <input type="image" name="form_btn_img" src="img/52@2x.png" alt="送信する" class="form_btn">
                 </div>
             </form>
+            <script type="text/javascript">
+                var submitted = false;
+            </script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+                onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+
         </section>
 
         <footer>
