@@ -375,11 +375,11 @@ margin-top: 60px;
 }
     .head_img{
         display: block;
+        margin: 0 auto;
     }
 }
 
 /*/////制作実績一覧/////*/
-/*///PC版///*/
 #work{
     max-width: 1000px;
     margin: 0 auto;
@@ -400,7 +400,6 @@ margin-top: 60px;
     transform: translate(-50%, -50%); 
     margin-bottom: 200px;
 }
-
 /*work作品一覧*/
 .work_wrap{
     position: relative;
@@ -520,21 +519,30 @@ margin-top: 60px;
     }
     .slider_wrap{
         display: block;
-        width: 60%;
+        width: 100%;
         margin: 0 auto;
     }
-    .slider-for{
+    .slick{
         margin-bottom: 30px;
     }
-
+    .slick img{
+        height: auto;
+        opacity: 0.3;
+        transform: scale(0.5);
+        transition: opacity 0.5s, transform 0.5s;
+        width: 100%;
+        
+    }
+    .slider_wrap .slick-center img {
+        opacity: 1;
+        transform: scale(1);
+    }
     .work_btmimg{
         width: 65%;
         display: block;
         margin-right: auto;
     }
-    .slick_img{
-        padding: 0 5px;
-    }
+
 }
 
 
@@ -548,8 +556,15 @@ margin-top: 60px;
     }
     .aboutme_wrap{
         display: block;
-        width: 70%;
+        width: 100%;
         margin: 20px auto;
+    }
+    .about_bg{
+        background-image: url(../img/21@2x.png);
+        background-position: center top 36px;
+        background-size:  50%;
+        background-repeat: no-repeat;
+        padding-bottom: 85px;
     }
     .aboutme_title{
         font-size: 60px;
@@ -560,18 +575,12 @@ margin-top: 60px;
         font-style: normal;
     }
     .about_text{
-        font-size: 19px;
-        line-height: 2.7;
-        width: 83%;
-        margin: 0 auto;
-        padding: 35% 0 10% 0;
+        font-size: 17px;
+        line-height: 2.3;
+        width: 65%;
+        margin: 16px auto;
+        padding: 30px 0 20px 0;
 
-    }
-    .text_bg{
-        background-image: url(../img/21@2x.png);
-        background-position: center;
-        background-size: 90%;
-        background-repeat: no-repeat;
     }
     .toabout{
         margin-top: 50px;
@@ -585,6 +594,36 @@ margin-top: 60px;
     .toabout_btmimg{
         width: 55%;
         margin-left: auto;
+    }
+}
+@media screen and (max-width:377px){
+    .aboutme_title{
+        font-size: 55px;
+    }
+    .about_bg{
+        background-image: url(../img/21@2x.png);
+        background-position: center top 55px;
+        background-size:  70%;
+        background-repeat: no-repeat;
+        padding-bottom: 10px;
+    }
+    .aboutme_title{
+        font-size: 60px;
+        line-height: 1.3;
+        text-align: center;
+        font-family: m-plus-2p,sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+    .about_text{
+        font-size: 15px;
+        line-height: 1.8;
+        width: 65%;
+        margin: 16px auto;
+        padding: 30px 0 20px 0;
+    }
+    .toabout{
+        margin-top: 10px;
     }
 }
 
@@ -654,6 +693,11 @@ margin-top: 60px;
     width: 80%;
     margin: 0 auto;
     padding-top: 20px;
+}
+@media screen and (max-width:377px){
+    .contact_title{
+    margin-top: 30px;
+    }
 }
 /*//問い合わせフォーム//*/
 .form {

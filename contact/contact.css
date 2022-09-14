@@ -149,7 +149,7 @@ html.loading-delay {
     font-weight: 300;
     font-style: normal;
     font-size: 90px;
-    margin-top: -100px;
+    padding: 100px 0 0 120px;
     text-align: start;
 }
 .header_dotbottom{
@@ -244,7 +244,7 @@ textarea {
     resize: none;
 }
 .form_txtarea{
-    width: 100%; /* 幅：横いっぱいに */
+    width: 105%; /* 幅：横いっぱいに */
     height: 150px; /* 高さ */
     font-size: 18px; /* フォントサイズ */
     border: solid 2px #e3e6ea; /* 線の色 */

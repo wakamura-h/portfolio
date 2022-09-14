@@ -40,7 +40,6 @@
     </script>
 
     <!--link-->
-
     <!--slick jQuery-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" type="text/css"
@@ -55,7 +54,6 @@
     <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-11/js/8-11.js"></script>
     <!--slick-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
 
 </head>
 
@@ -160,48 +158,35 @@
             <div class="work_sp">
                 <p class="work_text">↓タップすると詳細が見れます↓</p>
                 <div class="slider_wrap">
-                    <div class="slider-for">
-                        <div><a href="workdetail/lp_corporate.html"><img src="img/33@2x.png" alt="コーポレイトサイト"></a>
-                        </div>
-                        <div><a href="workdetail/lp_caffe.html"><img src="img/85@2x.png" alt="caffeサイト"></a></div>
-                        <div><a href="workdetail/illust.html"><img src="img/36@2x.png" alt="イラスト"></a></div>
-                        <div><a href="workdetail/banner_camp.html"><img src="img/37@2x.png" alt="バナー"></a></div>
-                        <div><a href="workdetail/banner_lotion.html"><img src="img/40@2x.png" alt="バナー化粧水"></a>
-                        </div>
-                        <div><a href="workdetail/banner_salad.html"><img src="img/57@2x.png" alt="バナー"></a>
-                        </div>
-                        <div><a href="workdetail/lp_hairsalon.html"><img src="img/58@2x.png" alt="コーポレイトサイト"></a>
-                        </div>
-                        <div><a href="workdetail/lp_portfolio.html"><img src="img/77@2x.png" alt="ポートフォリオサイト"></a>
-                        </div>
-                    </div>
-
-                    <div class="slider-nav">
-                        <div><img class="slick_img" src="img/33@2x.png" alt="corporateLP"></div>
-                        <div><img class="slick_img" src="img/85@2x.png" alt="caffeLP"></div>
-                        <div><img class="slick_img" src="img/36@2x.png" alt="illust"></div>
-                        <div><img class="slick_img" src="img/37@2x.png" alt="camp banner"></div>
-                        <div><img class="slick_img" src="img/40@2x.png" alt="lotion banner"></div>
-                        <div><img class="slick_img" src="img/57@2x.png" alt="salad  banner"></div>
-                        <div><img class="slick_img" src="img/58@2x.png" alt="salonLP"></div>
-                        <div><img class="slick_img" src="img/77@2x.png" alt="portfolio site"></div>
-                    </div>
+                    <ul class="slick">
+                        <li><a href="workdetail/lp_corporate.html"><img src="img/33@2x.png" alt="コーポレイトサイト"></a>
+                        </li>
+                        <li><a href="workdetail/lp_caffe.html"><img src="img/85@2x.png" alt="caffeサイト"></a></li>
+                        <li><a href="workdetail/illust.html"><img src="img/36@2x.png" alt="イラスト"></a>
+                        </li>
+                        <li><a href="workdetail/banner_camp.html"><img src="img/37@2x.png" alt="バナー"></a></li>
+                        <li><a href="workdetail/banner_lotion.html"><img src="img/40@2x.png" alt="バナー化粧水"></a>
+                        </li>
+                        <li><a href="workdetail/banner_salad.html"><img src="img/57@2x.png" alt="バナー"></a>
+                        </li>
+                        <li><a href="workdetail/lp_hairsalon.html"><img src="img/58@2x.png" alt="コーポレイトサイト"></a>
+                        </li>
+                        <li><a href="workdetail/lp_portfolio.html"><img src="img/77@2x.png" alt="ポートフォリオサイト"></a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="work_btmimg"><img src="img/17@2x.png" alt=""></div>
-            </div>
         </section>
 
         <!--aboutme-->
         <!--=============SP=============-->
         <section id="aboutme">
-            <div class="aboutme_wrap">
+            <div class="aboutme_wrap about_bg">
                 <h2 class="aboutme_title">About me</h2>
-                <div class="text_bg">
-                    <p class="about_text">当ポートフォリオサイトにご訪問いただきありがとうございます。
-                        「大切な想いを沢山の人に知ってもらいたい」<br>
-                        伝える人と見る人が繋がる架け橋のようなwebデザイナーをめざしてます。
-                    </p>
-                </div>
+                <p class="about_text">当ポートフォリオサイトにご訪問いただきありがとうございます。
+                    「大切な想いを沢山の人に知ってもらいたい」<br>
+                    伝える人と見る人が繋がる架け橋のようなwebデザイナーをめざしてます。
+                </p>
             </div>
             <div class="toabout"><a href="abaoutme/index.html"><img src="img/16@2x.png" alt=""></a></div>
             <div class="toabout_btmimg"><img src="img/15@2x.png" alt=""></div>
@@ -331,24 +316,17 @@
 
 
         //sp work一覧　slick
-        $('.slider-for').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.slider-nav'
-        });
-        $('.slider-nav').slick({
+        $('.slick').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
-            asNavFor: '.slider-for',
             dots: false,
-            centerMode: false,
-            focusOnSelect: true,
+            centerMode: true,
             autoplay: true,
             autoplaySpeed: 2000,
-            arrows: true,//左右の矢印
+            arrows: false,
+            centerPadding: '0px',
         });
+
 
         // 画面をスクロールをしたら動く
         function fadeAnime() {
