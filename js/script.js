@@ -14,8 +14,6 @@ $(function () {
         $('.sp_menu').fadeToggle();
     });
 });
-
-
 // 動きのきっかけとなるアニメーションの名前を定義
 function fadeAnime() {
     //ふわっと動くきっかけのクラス名と動きのクラス名の設定
@@ -57,7 +55,6 @@ function EachTextAnimeControl() {
 }
 $(window).on('load', function () {
 
-
     //グローバルメニューの文字変更
     var element = $(".title");
     element.each(function () {
@@ -77,7 +74,6 @@ $(window).on('load', function () {
     });
     EachTextAnimeControl();
 });
-
 
 //sp work一覧　slick
 $('.slick').slick({

@@ -116,7 +116,7 @@
                         <img src="img/W1920_PC-80.png" alt="caffeサイト">
                     </div>
                     <div class="accordion_switch" id="PCswitch">
-                        <p>PCサイト キャプション open/close</p>
+                        <p>PCサイト キャプション</p>
                     </div>
                 </div>
                 <div class="accordion_wrap">
@@ -124,7 +124,7 @@
                         <img src="img/W37580.png" alt="caffeサイト">
                     </div>
                     <div class="accordion_switch" id="SPswitch">
-                        <p>スマホサイト キャプション open/close</p>
+                        <p>スマホサイト キャプション</p>
                     </div>
                 </div>
             </div>
@@ -212,10 +212,11 @@
 
         //アコーディオンメニュー
         $('.accordion_switch').on('click', function () {
-            $(this).toggleClass('open');
             $(this).prev('.accordion_contents').slideToggle();
+            $(this).toggleClass('open');
             $('.accordion_switch').not($(this)).siblings('.accordion_contents').slideUp();
         });
+
 
 
 
