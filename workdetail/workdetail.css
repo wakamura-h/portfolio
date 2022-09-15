@@ -490,6 +490,7 @@ to {
 }
 .accordion_switch p{
     text-align: center;
+    font-size: 15px;
 }
 .accordion_switch:hover {
     -webkit-box-shadow: -4px -4px 0 #000;
@@ -502,7 +503,7 @@ to {
     height: 15px;
     position: absolute;
     top: 50%;
-    right: 10px;        /* 右から10pxの位置に指定 */
+    right: 5px;        /* 右からの位置指定 */
     transform: translateY(-50%);
     right: 20px;
     transition: transform .2s;
@@ -523,26 +524,6 @@ to {
     margin: 0 auto;
     width: 40%;
 }
-.accordioninner{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.closebox{
-    display: inline-block;
-    margin: 0 auto;
-    border: 2px solid #000;
-    border-radius: 0;
-    background: #fff;
-    padding: 20px;
-}
-.closebox :hover{
-    color: #fff;
-    background: #000;
-}
-
-
 @media screen and (max-width:767px){
     .accordion{
         padding-top: 20px;
@@ -550,6 +531,9 @@ to {
     .accordion_switch {
         width: 50%;
         margin: 0 auto;
+    }
+    .accordion_switch p{
+        font-size: 12px;
     }
 }
 
