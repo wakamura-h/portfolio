@@ -59,9 +59,9 @@ html.loading-delay {
 
 .bg{
     background-image: url(img/56@2x.png),url(img/80@2x.png);
-    background-position:left top,left -50px bottom;
+    background-position:left top,left bottom;
     background-repeat:no-repeat,no-repeat;
-    background-size: 24%,32%;
+    background-size: 24%,20%;
 }
 /*/////トップページ/////*/
 /*///PC版///*/
@@ -162,6 +162,20 @@ html.loading-delay {
 .header_bg{
     width: 760px;
     margin-top: 50px;
+    animation-name:Anime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+    animation-timing-function:ease-in-out;
+}
+@keyframes Anime{
+    from {
+    filter: blur(10px);
+    transform: scale(1.02);
+    }
+    to {
+    filter: blur(0);
+    transform: scale(1);
+    }
 }
 .hader_text{
     text-align: center;

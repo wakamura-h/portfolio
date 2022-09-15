@@ -382,6 +382,7 @@ html.loading-delay {
         padding: 20px 0 0 0 ; 
         margin: 0 auto;
         text-align: center;
+        display: block;
     }
     .profile_text{
         font-size: 15px;
@@ -395,7 +396,7 @@ html.loading-delay {
         width: 70%;
         font-size: 18px;
         font-weight: normal;
-        padding:50px 0 0 0;
+        padding:20px 0 0 0;
         margin: 0 auto;
         text-align: center;
     }
@@ -466,6 +467,9 @@ html.loading-delay {
     .service_title{
         font-size: 60px;
         margin: 180px 0 0 0 ;
+    }
+    .web,.coding{
+        margin-top: 100px;
     }
     .webitem,.codingitem{
         display: block;
