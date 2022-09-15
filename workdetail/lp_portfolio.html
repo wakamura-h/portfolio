@@ -220,6 +220,7 @@
         $('.accordion_switch').on('click', function () {
             $(this).toggleClass('open');
             $(this).prev('.accordion_contents').slideToggle();
+            $('.accordion_switch').not($(this)).siblings('.accordion_contents').slideUp();
         });
 
 

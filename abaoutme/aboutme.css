@@ -300,17 +300,19 @@ html.loading-delay {
 
 .name,.profile_pc,.skill{
     display: flex;
+    justify-content: center;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .name_item{
-    width: 24%;
+    width: 26%;
 }
 .name_text{
+    display: inline;
     font-size: 40px;
     font-weight: bold;
-    padding: 128px 0 0 85px;
+    padding: 113px 0 0 20px;
     width: 70%;
 }
 .profile_pc{
@@ -323,20 +325,20 @@ html.loading-delay {
     width: 70%;
 }
 .profile_item{
-    width: 20%;
-    padding-left: 10%;
+    width: 22%;
+    padding-left: 8%;
 }
 .skill{
     padding-top: 90px;
 }
 .skill_item{
-    width: 23%;
+    width: 24%;
 }
 
 .skill_text{
     font-size: 28px;
     font-weight: normal;
-    padding:142px 0 0 55px;
+    padding-top: 115px;
     width: 77%;
 }
 
@@ -411,9 +413,6 @@ html.loading-delay {
         width: 30%;
         padding-left: 10%;
     }
-    
-
-    
 }
 
 /*/////service/////*/
@@ -430,9 +429,10 @@ html.loading-delay {
     font-size: 90px;
     text-align: center;
     margin-top: 250px;
-    margin-bottom: 200px;
 }
-
+.web,.coding{
+    margin-top: 150px;
+}
 .webitem,.codingitem{
     margin-top: 70px;
     display: flex;
@@ -440,7 +440,7 @@ html.loading-delay {
 .item_title{
     font-size: 40px;
     font-weight: bold;
-    padding-bottom: 66px;
+    padding-bottom: 30px;
     border-bottom: solid 4px black;
     width: 567px;
 }
@@ -453,17 +453,15 @@ html.loading-delay {
     font-size: 17px;
     line-height: 2.47;
     font-weight: normal;
-    padding-top: 15px;
-}
-.codingitem{
-    justify-content: flex-end;
+    padding-top: 23px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 @media screen and (max-width:767px){
     #service{
         width: 70%;
         margin: 0 auto;
-
     }
     .service_title{
         font-size: 60px;
@@ -488,6 +486,19 @@ html.loading-delay {
 .item_text{
     padding-top: 25px;
 }
+}
+@media screen and (max-width:377px){
+    .title{
+        font-size: 50px;
+    }
+    .item_lead{
+        font-size: 14px;
+        line-height: 1.8;
+    }
+    .item_text{
+        font-size: 15px;
+        line-height: 2.1;
+    }
 }
 
 
@@ -586,6 +597,9 @@ html.loading-delay {
     }
     .footer_text{
         padding: 50px 0 30px 0;
+    }
+    .text2{
+        text-align: initial;
     }
 }
 
