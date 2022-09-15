@@ -333,7 +333,7 @@ margin-top: 60px;
     position: absolute;
     top: 400px;
     animation-name: smooth-fadein-out;  /*フェードイン・アウト*/
-    animation-duration: 1.5s; /*アニメーションの所要時間*/
+    animation-duration: 1.1s; /*アニメーションの所要時間*/
     animation-timing-function: linear;/*始まりから終わりまでの進行速度設定*//*等しい速度*/
     animation-delay: 0s; /*アニメーションをいつ開始するか*/
     animation-iteration-count: infinite;/*繰り返し設定*//*無制限*/
