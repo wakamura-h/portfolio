@@ -20,7 +20,7 @@ dd {
     margin: 0;
     padding: 0;
     line-height: 1;
-    color: black;
+    color: #444;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
     font-feature-settings: "palt";
 }
@@ -87,6 +87,7 @@ html.loading-delay {
     font-style: normal;
     font-size: 17px;
     margin-left: 18px;
+    color: #000;
 }
 /*Hikari Wakamura Portforio*/
 .side_box h3{
@@ -95,6 +96,7 @@ html.loading-delay {
     font-style: normal;
     font-size: 25px;
     margin-left: 65px;
+    color: #000;
 }
 /*左側縦書き*/
 .side_box{
@@ -107,6 +109,7 @@ html.loading-delay {
     font-style: normal;
     font-size: 20px;
     line-height: 2.5;
+    color: #000;
 }
 .pc_nav li a{
 	position: relative;    /*テキストの基点*/
@@ -151,6 +154,7 @@ html.loading-delay {
     font-size: 90px;
     padding: 100px 0 0 120px;
     text-align: start;
+    color: #000;
 }
 .header_dotbottom{
     width: 137px;
@@ -226,18 +230,6 @@ html.loading-delay {
     margin-bottom: auto;
 }
 
-.required{
-    border-radius: 6px;
-    margin-left: 8px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 38px;
-    display: inline-block;
-    text-align: center;
-    background: rgb(152, 150, 150);
-    color: #fff;
-    font-size: 10px;
-}
     /* 名前・フリガナ・メールアドレスボックス*/
 input[type="text"]{
     width: 100%; 

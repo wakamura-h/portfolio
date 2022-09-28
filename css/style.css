@@ -513,14 +513,33 @@ margin-top: 60px;
         padding-top: 250px;
     }
     .work_text{
-        font-size: 13px;
+        font-size: 15px;
         text-align: center;
-        padding: 10px 0;
+        padding: 10px 0 20px;
+        position: relative;
     }
+    .work_text::before,
+    .work_text::after {
+    position: absolute;
+    top: 0.8rem;
+    height: 1.8rem;
+    content: '';
+}
+    .work_text::before {
+    border-left: solid 2px;
+    left: 100px;
+    transform: rotate(-30deg);
+}
+    .work_text::after {
+    border-right: solid 2px;
+    right: 100px;
+    transform: rotate(30deg);
+}
     .slider_wrap{
         display: block;
         width: 100%;
         margin: 0 auto;
+        padding-top: 20px;
     }
     .slick{
         margin-bottom: 30px;
@@ -538,7 +557,7 @@ margin-top: 60px;
         transform: scale(1);
     }
     .work_btmimg{
-        width: 65%;
+        width: 45%;
         display: block;
         margin-right: auto;
     }

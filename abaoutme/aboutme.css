@@ -20,7 +20,7 @@ dd {
     margin: 0;
     padding: 0;
     line-height: 1;
-    color: black;
+    color: #444;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
     font-feature-settings: "palt";
 }
@@ -256,6 +256,7 @@ html.loading-delay {
     font-style: normal;
     font-size: 90px;
     margin-top: 15px;
+    color: #000;
 }
 .heading{
     font-size: 19px;
@@ -430,6 +431,7 @@ html.loading-delay {
     font-size: 90px;
     text-align: center;
     margin-top: 250px;
+    color: #000;
 }
 .web,.coding{
     margin-top: 150px;
@@ -519,6 +521,7 @@ html.loading-delay {
     font-style: normal;
     font-size: 90px;
     margin-top: 113px;
+    color: #000;
 }
 .text1{
     font-size: 20px;
